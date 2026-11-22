@@ -10,261 +10,202 @@
 <title>ABC บริการวีซ่าไทย</title>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* Layout idea: one bright river-day story. Sky-blue hero, a single vertical timeline rail
-   that carries the traveller from landing to take-off, sunny yellow for every action. */
-:root{
-  color-scheme: light;
-  --sky:#1a8cff;        /* Mekong-day sky, main brand colour */
-  --sky-soft:#e3f2ff;   /* pastel sky for panels */
-  --sun:#ffcf3f;        /* action colour: buttons, time chips */
-  --sun-soft:#fff5cf;
-  --mint:#d5f5e6;       /* "included / ok" */
-  --mint-ink:#0b7a52;
-  --coral:#ff6b5e;      /* warnings only */
-  --coral-soft:#ffe6e2;
-  --ink:#14315c;        /* text */
-  --ink-2:#4c6485;      /* secondary text */
-  --paper:#f6fbff;      /* page background */
-  --card:#ffffff;
-  --line:#cfe4f8;
-  --font-display:"Prompt","Noto Sans SC","Noto Sans Thai",system-ui,sans-serif;
-  --font-body:"Sarabun","Noto Sans SC","Noto Sans Thai",system-ui,sans-serif;
-  --r:20px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
-html[lang="zh"] body{--font-display:"Noto Sans SC","Prompt",system-ui,sans-serif;--font-body:"Noto Sans SC","Sarabun",system-ui,sans-serif;line-height:1.75}
-img{max-width:100%;display:block}
-h1,h2,h3{font-family:var(--font-display);line-height:1.25;margin:0;text-wrap:balance}
-p{margin:0}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-section{padding:56px 0}
-.eyebrow{font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--sky)}
-h2{font-size:clamp(26px,4.4vw,36px);font-weight:700;margin-top:6px}
-.lede{color:var(--ink-2);max-width:60ch;margin-top:10px}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
-
-/* top bar */
-.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:16px;white-space:nowrap}
-.brand img{height:40px;width:auto;flex:none}
-.bn{display:grid;line-height:1.15}
-.bn b{font-size:17px;letter-spacing:.04em}
-.bn small{font:500 11.5px var(--font-display);color:var(--ink-2);white-space:nowrap}
-.lang{display:flex;background:var(--sky-soft);border-radius:999px;padding:3px}
-.lang button{border:0;background:transparent;font:600 14px var(--font-display);color:var(--ink-2);padding:6px 12px;border-radius:999px;cursor:pointer}
-.lang button[aria-pressed="true"]{background:var(--sky);color:#fff}
-
-/* hero */
-.hero{padding:28px 0 40px;background:linear-gradient(180deg,#dff0ff 0%,var(--paper) 100%)}
-.hero .wrap{display:grid;gap:28px;align-items:center}
-.hero h1{font-size:clamp(34px,8vw,58px);font-weight:700;margin:10px 0 14px;letter-spacing:-.01em}
-.hero h1 em{font-style:normal;color:var(--sky)}
-.hero p.sub{font-size:18px;color:var(--ink-2);max-width:52ch}
-.tagline{display:inline-block;background:var(--sun);font:700 clamp(19px,4.6vw,26px)/1.3 var(--font-display);padding:8px 18px;border-radius:14px;margin:0 0 16px;transform:rotate(-1.5deg)}
-.chips{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.chips li{background:#fff;border:1.5px solid var(--sky);color:var(--sky);font:600 14px var(--font-display);padding:5px 12px;border-radius:999px}
-.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:22px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--sun);color:var(--ink);font:700 17px var(--font-display);padding:14px 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 6px 0 #e3ac10;transition:transform .12s, box-shadow .12s}
-.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #e3ac10}
-.btn:active{transform:translateY(6px);box-shadow:0 0 0 #e3ac10}
-.cta-note{font-size:15px;color:var(--ink-2)}
-.hero-photo{position:relative;max-width:440px;width:100%;justify-self:center}
-.hero-photo::before{content:"";position:absolute;inset:18px -14px -14px 18px;background:var(--sun);border-radius:36px;z-index:0}
-.hero-photo img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:32px;border:5px solid #fff}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
-.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
-.fact b{display:block;font:700 28px/1.1 var(--font-display);color:var(--sky);font-variant-numeric:tabular-nums}
-.fact span{display:block;margin-top:6px;font-size:15px;color:var(--ink-2);line-height:1.45}
-
-/* who */
-.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:24px}
-.who article{border-radius:var(--r);padding:20px;background:var(--card);border:1px solid var(--line)}
-.who article.ok{background:var(--mint);border-color:transparent}
-.who article.extra{background:var(--sun-soft);border-color:transparent}
-.who h3{font-size:19px;font-weight:600;display:flex;align-items:center;gap:8px}
-.who p{margin-top:8px;font-size:16px}
-.tag{font:600 12px var(--font-display);padding:3px 10px;border-radius:999px;background:#fff}
-.ok .tag{color:var(--mint-ink)} .extra .tag{color:#8a5a00}
-.ext{display:grid;gap:18px;align-items:center;margin-top:14px;background:var(--sky);color:#fff;border-radius:var(--r);padding:22px}
-.ext-n{background:var(--sun);color:var(--ink);border-radius:16px;padding:14px 18px;text-align:center;justify-self:start}
-.ext-n b{display:block;font:700 30px/1.1 var(--font-display);white-space:nowrap}
-.ext-n span{font:600 14px var(--font-display)}
-.ext h3{font-size:21px;font-weight:600;color:#fff}
-.ext p{margin:8px 0 12px;color:#eaf5ff;font-size:16px}
-.ext .list li{color:#fff}
-@media (min-width:700px){.ext{grid-template-columns:auto 1fr;gap:26px;padding:26px}}
-.fine{font-size:14px;color:var(--ink-2);margin-top:14px}
-
-/* timeline */
-.day{background:#fff;border-block:1px solid var(--line)}
-.steps{list-style:none;margin:32px 0 0;padding:0;position:relative}
-.steps::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:4px;border-radius:4px;background:repeating-linear-gradient(180deg,var(--sky) 0 10px,transparent 10px 18px)}
-.step{position:relative;padding:0 0 40px 58px;display:grid;gap:16px}
-.step:last-child{padding-bottom:0}
-.num{position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--sky);color:#fff;font:700 18px/42px var(--font-display);text-align:center;border:4px solid #fff;box-shadow:0 0 0 2px var(--sky)}
-.time{display:inline-block;font:600 14px var(--font-display);background:var(--sun);padding:3px 12px;border-radius:999px;margin-bottom:8px;font-variant-numeric:tabular-nums}
-.step h3{font-size:22px;font-weight:600}
-.step p{color:var(--ink-2);margin-top:6px;max-width:52ch}
-.shots{display:grid;gap:10px;grid-template-columns:1fr}
-.shots.two{grid-template-columns:1fr 1fr}
-.shots img{width:100%;object-fit:cover;border-radius:18px;background:var(--sky-soft)}
-.r45{aspect-ratio:4/5}.r54{aspect-ratio:5/4}.r43{aspect-ratio:4/3}
-
-/* booking */
-.book3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:26px;counter-reset:b}
-.book3 article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px;counter-increment:b}
-.book3 article::before{content:counter(b);display:block;font:700 40px/1 var(--font-display);color:var(--sun);-webkit-text-stroke:1.5px var(--ink);margin-bottom:12px}
-.book3 h3{font-size:18px;font-weight:600}
-.book3 p{font-size:16px;color:var(--ink-2);margin-top:8px}
-
-.two-col{display:grid;gap:16px;margin-top:26px}
-.panel{background:var(--sky-soft);border-radius:var(--r);padding:22px}
-.panel.sun{background:var(--sun-soft)}
-.panel h3{font-size:19px;font-weight:600;margin-bottom:10px}
-.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.list li{position:relative;padding-left:28px;font-size:16px;line-height:1.5}
-.list li::before{content:"";position:absolute;left:0;top:.28em;width:18px;height:18px;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.6L13 6.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px}
-.list.x li::before{background:var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M6 6l6 6M12 6l-6 6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/18px}
-.list.dot li::before{background:var(--sun);border:2px solid var(--ink);width:10px;height:10px;top:.5em;left:4px}
-.sub-h{font:600 14px var(--font-display);color:var(--ink-2);margin:18px 0 8px}
-
-.pro{background:var(--sky-soft)}
-.pro4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:26px}
-.pro4 article{background:var(--card);border-radius:var(--r);padding:20px;border-top:6px solid var(--sun)}
-.pro4 h3{font-size:18px;font-weight:600}
-.pro4 p{font-size:16px;color:var(--ink-2);margin-top:8px}
-.pro + section{padding-top:56px !important}
-.slogan{margin-top:28px;display:grid;gap:4px;justify-items:center;text-align:center;background:var(--card);border-radius:var(--r);padding:20px 16px;border:2px dashed var(--sky)}
-.slogan b{font:700 clamp(22px,5.4vw,30px)/1.3 "Noto Sans SC",var(--font-display);color:var(--sky);letter-spacing:.06em}
-.slogan span{font:600 clamp(17px,4.2vw,21px)/1.4 "Prompt",var(--font-display);color:var(--ink)}
-.slogan i{font:500 15px/1.4 "Prompt",var(--font-display);color:var(--ink-2)}
-.slogan.on-sky{background:transparent;border-color:rgba(255,255,255,.6);margin-top:34px;max-width:480px}
-.slogan.on-sky b{color:var(--sun)} .slogan.on-sky span{color:#fff} .slogan.on-sky i{color:#d6ebff}
-.fbrand{display:flex;align-items:center;gap:14px;margin-top:26px}
-.fbrand img{height:64px;width:auto;background:#fff;border-radius:14px;padding:8px 10px}
-.fbrand b{display:block;font:700 18px/1.3 var(--font-display);color:#fff}
-.fbrand span{font-size:14px;color:#d6ebff}
-.final .fbrand + .foot{margin-top:14px}
-/* gallery */
-.gal{columns:2;column-gap:10px;margin-top:24px}
-.gal img{width:100%;height:auto;border-radius:16px;margin:0 0 10px;break-inside:avoid;background:var(--sky-soft)}
-@media (min-width:620px){.gal{columns:3}}
-@media (min-width:960px){.gal{columns:4}}
-
-/* final */
-.final{background:var(--sky);color:#fff;border-radius:32px 32px 0 0;padding:56px 0 110px}
-.final h2{color:#fff}
-.final p{max-width:58ch;margin-top:12px;color:#eaf5ff}
-.msg{background:#fff;color:var(--ink);border-radius:16px;padding:16px 18px;margin-top:22px;white-space:pre-wrap;font-size:16px;line-height:1.7;max-width:480px;user-select:all}
-.final .cta-row{margin-top:18px}
-.copied{font-weight:700;min-height:1.6em}
-.foot{font-size:13px;color:#d6ebff;margin-top:34px;max-width:70ch}
-
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);border-top:1px solid var(--line);display:flex;justify-content:center}
-.sticky .btn{width:100%;max-width:440px;justify-content:center;padding:12px 20px;box-shadow:0 4px 0 #e3ac10}
-
-@media (min-width:820px){
-  section{padding:76px 0}
-  .hero{padding:48px 0 56px}
-  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:48px}
-  .facts{grid-column:1/-1}
-  .step{grid-template-columns:1fr 1fr;gap:32px;padding-bottom:56px;align-items:start}
-  .step .shots:empty{display:none}
-  .two-col{grid-template-columns:1fr 1fr}
-  .sticky{display:none}
-  .final{padding-bottom:64px}
-}
-@media (max-width:420px){
-  .bn small{font-size:10.5px}.brand img{height:34px}
-  .lang button{padding:6px 9px}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-
-.hero h1{font-size:clamp(32px,7.4vw,54px)}
-.stat{display:inline-grid;background:var(--sky);color:#fff;border-radius:22px;padding:14px 22px;margin:4px 0 16px;box-shadow:0 8px 0 #0b6fd6}
-.stat b{font:700 clamp(40px,10vw,60px)/1 var(--font-display);color:var(--sun);font-variant-numeric:tabular-nums}
-.stat span{font:600 16px/1.4 var(--font-display)}
-.hero-photo{max-width:520px}.hero-photo img{aspect-ratio:4/3;object-position:center}
-.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;margin-top:26px}
-.svc a{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 6px 18px rgba(20,49,92,.08);transition:transform .12s, box-shadow .12s}
-.svc a:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(20,49,92,.16)}
-.svc .ph{aspect-ratio:16/9;background:var(--sky-soft);display:flex;align-items:flex-end;padding:14px;background-size:cover;background-position:center}
-.svc .ph b{font:700 30px/1 var(--font-display);color:var(--sky)}
-.svc .ph.c1{background-color:var(--sun-soft)}.svc .ph.c1 b{color:#8a5a00}
-.svc .ph.c2{background-color:var(--mint)}.svc .ph.c2 b{color:var(--mint-ink)}
-.svc .ph.c3{background-color:#ffe6f1}.svc .ph.c3 b{color:#c2256e}
-.svc .ph.c4{background-color:#ece6ff}.svc .ph.c4 b{color:#5a3fc0}
-.svc img{width:100%;aspect-ratio:16/9;object-fit:cover}
-.svc .tx{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
-.svc h3{font-size:20px;font-weight:600}
-.svc p{font-size:15px;color:var(--ink-2);flex:1}
-.svc .go{font:600 15px var(--font-display);color:var(--sky);margin-top:6px}
-.svc .hot{align-self:flex-start;font:600 12px var(--font-display);background:var(--sun);border-radius:999px;padding:2px 10px}
-.svc .soon{border:2px dashed var(--line);border-radius:22px;padding:22px 18px;display:flex;flex-direction:column;justify-content:center;gap:6px;background:transparent}
-.svc .soon h3{color:var(--ink-2)}.svc .soon p{flex:0}
+/* Layout idea: agency home page. White canvas, bright-blue hero with a service finder card,
+   navy bands for proof and footer, sunny yellow for every action. */
+:root{color-scheme:light;--navy:#12305e;--blue:#1a73e8;--blue-soft:#e8f1ff;--sun:#ffc93c;--sun-deep:#f0a500;--ink:#12305e;--ink-2:#51688a;--paper:#f5f9ff;--card:#fff;--line:#d5e3f7;--mint:#d9f6e8;--pink:#ffe3ee;--lilac:#ebe5ff;
+--font-display:"Prompt","Noto Sans SC",system-ui,sans-serif;--font-body:"Sarabun","Noto Sans SC",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--card);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
+html[lang="zh"] body{--font-display:"Noto Sans SC","Prompt",system-ui,sans-serif;--font-body:"Noto Sans SC","Sarabun",system-ui,sans-serif}
+img{max-width:100%;display:block}h1,h2,h3{font-family:var(--font-display);line-height:1.25;margin:0;text-wrap:balance}p{margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--sun-deep);outline-offset:3px;border-radius:8px}
+.util{background:var(--navy);color:#dbe8ff;font:500 13px var(--font-display)}
+.util .wrap{display:flex;flex-wrap:wrap;gap:4px 20px;justify-content:center;padding-top:7px;padding-bottom:7px}
+.util b{color:var(--sun)}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:16px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand img{height:42px;width:auto}.bn{display:grid;line-height:1.15}.bn b{font:700 18px var(--font-display);letter-spacing:.04em}.bn small{font:500 11.5px var(--font-display);color:var(--ink-2);white-space:nowrap}
+.links{display:none;gap:22px}.links a{font:600 15px var(--font-display);color:var(--ink);text-decoration:none}.links a:hover{color:var(--blue)}
+.lang{display:flex;background:var(--blue-soft);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;font:600 13px var(--font-display);color:var(--ink-2);padding:6px 10px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--sun);color:var(--navy);font:700 16px var(--font-display);padding:13px 22px;border-radius:12px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 4px 0 var(--sun-deep);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--sun-deep)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.nav .btn{display:none;padding:9px 16px;font-size:14px}
+.hero{background:linear-gradient(135deg,#1a73e8 0%,#2f8bff 55%,#53a6ff 100%);color:#fff;padding:36px 0 46px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.1)}
+.hero .wrap{display:grid;gap:28px;position:relative;z-index:1}
+.eyebrow{font:600 14px var(--font-display);letter-spacing:.06em;color:var(--blue)}
+.hero .eyebrow{display:inline-block;color:var(--navy);background:var(--sun);border-radius:999px;padding:4px 14px}
+.hero h1{font-size:clamp(34px,7.6vw,56px);font-weight:700;margin:14px 0 12px}.hero h1 em{font-style:normal;color:var(--sun)}
+.hero .sub{font-size:18px;color:#eef5ff;max-width:54ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;align-items:center}
+.trust{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.trust li{display:flex;gap:10px;align-items:center;font:600 14px/1.3 var(--font-display)}
+.trust svg,.ic svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.trust i{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.18);flex:none}
+.finder{background:#fff;color:var(--ink);border-radius:20px;padding:22px;box-shadow:0 18px 40px rgba(10,40,90,.28);align-self:start}
+.finder h2{font-size:21px;font-weight:700}.finder h2 em{font-style:normal;color:var(--blue)}
+.finder label{display:block;font:600 13px var(--font-display);color:var(--ink-2);margin:14px 0 6px}
+.finder select{width:100%;font:500 16px var(--font-body);color:var(--ink);padding:12px;border:1.5px solid var(--line);border-radius:12px;background:#fff}
+.finder .btn{width:100%;margin-top:16px}
+.finder small{display:block;margin-top:12px;font-size:13.5px;color:var(--ink-2)}
+.finder img{border-radius:14px;margin-top:16px;aspect-ratio:16/9;object-fit:cover;width:100%}
+section{padding:60px 0}
+.head{text-align:center;max-width:720px;margin:0 auto}
+.head h2{font-size:clamp(26px,4.6vw,36px);font-weight:700;margin-top:6px}.head h2 em{font-style:normal;color:var(--blue)}
+.head p{color:var(--ink-2);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:30px}
+.svc{display:flex;flex-direction:column;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px;text-decoration:none;color:var(--ink);transition:transform .12s,box-shadow .12s,border-color .12s}
+a.svc:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(18,48,94,.14);border-color:var(--blue)}
+.ic{display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:var(--blue-soft);color:var(--blue)}
+.svc.y .ic{background:#fff3cc;color:#a56c00}.svc.m .ic{background:var(--mint);color:#0b7a52}.svc.p .ic{background:var(--pink);color:#c2256e}.svc.l .ic{background:var(--lilac);color:#5a3fc0}
+.svc h3{font-size:19px;font-weight:600;margin-top:4px}.svc p{font-size:15px;color:var(--ink-2);flex:1}
+.svc .go{font:600 15px var(--font-display);color:var(--blue)}
+.tag{align-self:flex-start;font:600 12px var(--font-display);border-radius:999px;padding:2px 10px;background:var(--sun);color:var(--navy)}
+.svc.soon{border-style:dashed;background:var(--paper)}.svc.soon .tag{background:var(--blue-soft);color:var(--blue)}
+.sub-h{font:700 20px var(--font-display);margin:40px 0 0;display:flex;align-items:center;gap:12px}.sub-h::after{content:"";flex:1;height:2px;background:var(--line)}
+.band{background:var(--navy);color:#fff;border-radius:24px;padding:28px 24px;display:grid;gap:22px;align-items:center}
+.band h2{font-size:24px;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.stats b{display:block;font:700 34px/1.1 var(--font-display);color:var(--sun);font-variant-numeric:tabular-nums}
+.stats span{font:500 14px/1.4 var(--font-display);color:#dbe8ff}
+.alt{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:30px;counter-reset:s}
+.steps article{background:#fff;border-radius:18px;padding:22px 20px;border:1px solid var(--line);counter-increment:s;position:relative}
+.steps article::before{content:"0" counter(s);position:absolute;right:16px;top:14px;font:700 34px/1 var(--font-display);color:var(--blue-soft)}
+.steps .ic{background:var(--blue);color:#fff;border-radius:50%}
+.steps h3{font-size:18px;font-weight:600;margin-top:12px}.steps p{font-size:15px;color:var(--ink-2);margin-top:6px}
+.why{display:grid;gap:28px;align-items:center}
+.why ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:14px}
+.why li{display:flex;gap:14px;align-items:flex-start}.why li b{display:block;font:600 17px var(--font-display)}.why li span{font-size:15px;color:var(--ink-2)}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shots img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;box-shadow:0 10px 24px rgba(18,48,94,.16)}
+.shots img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.slogan{margin-top:26px;display:grid;gap:4px;justify-items:center;text-align:center;border:2px dashed var(--blue);border-radius:18px;padding:18px 14px}
+.slogan b{font:700 clamp(22px,5vw,28px)/1.3 "Noto Sans SC",var(--font-display);color:var(--blue);letter-spacing:.06em}
+.slogan span{font:600 18px/1.4 "Prompt",var(--font-display)}.slogan i{font:500 14px/1.4 "Prompt",var(--font-display);color:var(--ink-2)}
+.contact{background:linear-gradient(135deg,#1a73e8,#3d95ff);color:#fff}
+.contact .wrap{display:grid;gap:26px;align-items:center}
+.contact h2{font-size:clamp(26px,4.6vw,36px);font-weight:700}.contact p{color:#eef5ff;margin-top:10px;max-width:52ch}
+.msgbox{background:#fff;color:var(--ink);border-radius:18px;padding:20px}
+.msg{white-space:pre-wrap;font-size:16px;line-height:1.7;background:var(--paper);border-radius:12px;padding:14px 16px;user-select:all}
+.copied{font-weight:700;min-height:1.6em;font-size:15px;color:var(--blue)}
+footer{background:var(--navy);color:#dbe8ff;padding:44px 0 26px;font-size:15px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+footer h3{font:600 15px var(--font-display);color:#fff;margin-bottom:10px}
+footer a{display:block;color:#dbe8ff;text-decoration:none;padding:3px 0}footer a:hover{color:var(--sun)}
+.fbrand{display:flex;gap:12px;align-items:center;margin-bottom:12px}.fbrand img{height:54px;background:#fff;border-radius:12px;padding:6px 8px}.fbrand b{font:700 17px/1.3 var(--font-display);color:#fff}
+.fs b{display:block;font:700 18px "Noto Sans SC",var(--font-display);color:var(--sun)}
+.foot{border-top:1px solid rgba(255,255,255,.18);margin-top:28px;padding-top:16px;font-size:13px;color:#b9cdee}
+@media (min-width:600px){.trust{grid-template-columns:repeat(4,minmax(0,1fr))}.trust li{flex-direction:column;align-items:flex-start}.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:900px){.links{display:flex}.nav .btn{display:inline-flex}.hero{padding:60px 0 70px}.hero .wrap{grid-template-columns:1.25fr .75fr;gap:48px;align-items:center}
+.band{grid-template-columns:auto 1fr;gap:40px;padding:34px 40px}.why{grid-template-columns:1fr 1fr;gap:56px}.contact .wrap{grid-template-columns:1.1fr .9fr;gap:48px}section{padding:80px 0}}
+@media (max-width:420px){.bn small{display:none}.lang button{padding:6px 8px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.svc{transition:none}}
 </style>
 </head>
-<body><header class="top"><div class="wrap">
-<div class="brand"><img src="img/logo.png" alt="ABC"><span class="bn"><b>ABC</b><small>Alliance Border Consulting</small></span></div>
+<body><div class="util"><div class="wrap"><span><b>10,000+</b> <span data-i="u1">เคสที่ดูแลมาแล้ว</span></span><span data-i="u2">ผู้เชี่ยวชาญด้านไทยวีซ่า</span><span data-i="u3">จันทร์–ศุกร์ ทุกวันทำการ</span></div></div>
+<header class="nav"><div class="wrap">
+<a class="brand" href="#top"><img src="img/logo.png" alt="ABC"><span class="bn"><b>ABC</b><small>Alliance Border Consulting</small></span></a>
+<nav class="links" aria-label="Main"><a href="#services" data-i="nv1">บริการ</a><a href="#process" data-i="nv2">ขั้นตอน</a><a href="#why" data-i="nv3">ทำไมต้องเรา</a></nav>
 <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="zh" aria-pressed="false">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button><button type="button" data-lang="th" aria-pressed="true">ไทย</button></div>
+<button class="btn" type="button" data-go="book-now" data-i="nv4">ปรึกษาเรา</button>
 </div></header>
-<main>
+<main id="top">
 <section class="hero"><div class="wrap">
 <div>
-<div class="eyebrow" data-i="hero_eb">ผู้เชี่ยวชาญด้านไทยวีซ่า</div>
-<h1 data-i="hero_h1">เรื่องวีซ่าไทย <em>ให้ผู้เชี่ยวชาญดูแล</em></h1>
-<div class="stat"><b>10,000+</b><span data-i="st_n">เคสที่เราดูแลมาแล้ว</span></div>
-<p class="sub" data-i="hero_p">เราเป็นผู้เชี่ยวชาญด้านไทยวีซ่า ให้คำปรึกษาชาวต่างชาติที่ใช้ชีวิตในไทย และดำเนินการให้ครบทุกขั้นตอน ทั้งต่ออายุ Visa Run วีซ่าทำงาน วีซ่าเกษียณ และวีซ่าคู่สมรส</p>
-<ul class="chips"><li data-i="c1">ผู้เชี่ยวชาญไทยวีซ่า</li><li data-i="c2">ให้คำปรึกษาการใช้ชีวิตในไทย</li><li data-i="c3">Full service</li><li data-i="c4">中文 · English · ไทย</li></ul>
-<div class="cta-row"><button class="btn" type="button" data-go="svc" data-i="cta">ดูบริการทั้งหมด</button><span class="cta-note" data-i="cta_note">เลือกบริการเพื่อดูขั้นตอนและเอกสาร</span></div>
+<span class="eyebrow" data-i="hero_eb">ผู้เชี่ยวชาญด้านไทยวีซ่า</span>
+<h1 data-i="hero_h1">ใช้ชีวิตในไทยอย่างสบายใจ <em>เรื่องวีซ่าให้เราดูแล</em></h1>
+<p class="sub" data-i="hero_p">เราให้คำปรึกษาชาวต่างชาติที่ใช้ชีวิตในไทย และดำเนินการให้ครบทุกขั้นตอน ทั้งต่ออายุ Visa Run วีซ่าทำงาน วีซ่าเกษียณ และวีซ่าคู่สมรส</p>
+<div class="cta-row"><button class="btn" type="button" data-go="book-now" data-i="cta1">ปรึกษาเรา</button><button class="btn ghost" type="button" data-go="services" data-i="cta2">ดูบริการทั้งหมด</button></div>
+<ul class="trust"><li><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 13V9a3 3 0 116 0v4h3v4H6v-4zM5 20h14"/></svg></i><span data-i="t1">10,000+ เคสที่ดูแลมาแล้ว</span></li><li><i><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.200"/><path d="M3 20c0-3.300 2.700-6 6-6s6 2.700 6 6M16 6.200a3 3 0 010 5.600M17.500 14.500c2 .800 3.500 2.800 3.500 5.500"/></svg></i><span data-i="t2">ทีมผู้เชี่ยวชาญวีซ่าไทย</span></li><li><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg></i><span data-i="t3">เตรียมเอกสารให้ทั้งหมด</span></li><li><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.500-3 7.500-7 9-4-1.500-7-4.500-7-9V6z"/><path d="M9 12l2.200 2.200L15 10"/></svg></i><span data-i="t4">ซื่อสัตย์ โปร่งใส</span></li></ul>
 </div>
-<div class="hero-photo"><img src="img/kcounter.webp" alt="" data-alt="alt_hero"></div>
-</div></section>
-<section id="svc"><div class="wrap">
-<div class="eyebrow" data-i="svc_eb">บริการของเรา</div>
-<h2 data-i="svc_h">เลือกบริการที่คุณต้องการ</h2>
-<p class="lede" data-i="svc_p">แต่ละบริการมีหน้าของตัวเอง บอกขั้นตอนและเอกสารที่ต้องใช้</p>
-<div class="svc"><a href="../extend/"><img src="img/kcounter.webp" alt="" data-alt="alt_ext"><div class="tx"><span class="hot" data-i="s1_t">ลูกค้าใช้มากที่สุด</span><h3 data-i="s1_h">ต่ออายุวีซ่า 30 วัน</h3><p data-i="s1_p">เสร็จในวันที่ IT Square กรุงเทพฯ ส่งพาสปอร์ตให้เรา ที่เหลือเราจัดการ มีบริการที่นนทบุรี ระยอง พัทยาด้วย</p><span class="go" data-i="go">ดูรายละเอียด →</span></div></a>
-<a href="../"><img src="img/hero.webp" alt="" data-alt="alt_run"><div class="tx"><h3 data-i="s2_h">Visa Run วันเดียวจบ</h3><p data-i="s2_p">บินกรุงเทพฯ–เชียงราย ออกเข้าที่ด่านเชียงแสน กลับในวันเดียว เดินทางได้ทุกวัน คนเดียวก็ออก</p><span class="go" data-i="go">ดูรายละเอียด →</span></div></a>
-<a href="https://toey99.github.io/extendvisa2nd/"><div class="ph c1"><b>30</b></div><div class="tx"><h3 data-i="s3_h">ต่อวีซ่า 30 วัน: เอกสารที่ต้องส่งล่วงหน้า</h3><p data-i="s3_p">รายการเอกสารที่ต้องส่งให้เราก่อนวันต่ออายุ และข้อปฏิบัติหน้างาน</p><span class="go" data-i="go">ดูรายละเอียด →</span></div></a>
-<a href="https://toey99.github.io/it-square-guide/"><div class="ph "><b>IT</b></div><div class="tx"><h3 data-i="s4_h">คู่มือการเดินทาง IT Square</h3><p data-i="s4_p">วิธีขึ้นมาจุดนัดพบชั้น 3 IT Square หลักสี่ ตอนเช้า พร้อมรูปและแผนที่</p><span class="go" data-i="go">ดูรายละเอียด →</span></div></a>
-<a href="https://toey99.github.io/visanonb-checklist/"><div class="ph c2"><b>Non-B</b></div><div class="tx"><h3 data-i="s5_h">วีซ่าทำงาน Non-B · ใบอนุญาตทำงาน</h3><p data-i="s5_p">รายการเอกสารเปลี่ยนวีซ่า Non-B ในประเทศ ยื่นที่สถานทูต และ บต.32 (WP.32)</p><span class="go" data-i="go">ดูรายละเอียด →</span></div></a>
-<a href="https://toey99.github.io/retirementvisa/"><div class="ph c4"><b>50+</b></div><div class="tx"><h3 data-i="s6_h">วีซ่าเกษียณ (Retirement)</h3><p data-i="s6_p">บริการทำวีซ่าผู้สูงอายุ เอกสารที่ต้องส่งล่วงหน้าและขั้นตอน</p><span class="go" data-i="go">ดูรายละเอียด →</span></div></a>
-<a href="https://toey99.github.io/thaiwife/"><div class="ph c3"><b>♥</b></div><div class="tx"><h3 data-i="s7_h">วีซ่าคู่สมรสไทย</h3><p data-i="s7_p">บริการวีซ่าคู่สมรสไทย ตรวจเอกสารเบื้องต้น แล้วเดินทางไปยื่นที่ ตม. ต่างจังหวัด</p><span class="go" data-i="go">ดูรายละเอียด →</span></div></a>
-<div class="soon"><h3 data-i="s8_h">บริการอื่น ๆ กำลังตามมา</h3><p data-i="s8_p">เรากำลังเพิ่มหน้ารายละเอียดของบริการอื่น ๆ ต้องการเรื่องอื่น สอบถามเราได้โดยตรง</p></div></div>
-</div></section>
-<section class="pro"><div class="wrap">
-<div class="eyebrow" data-i="pro_eb">ทำไมต้องเรา</div>
-<h2 data-i="pro_h">ประสบการณ์จากกว่า 10,000 เคส</h2>
-<p class="lede" data-i="pro_p">เราอยู่หน้างานที่ ตม. ทุกวันทำการ ดำเนินเรื่องให้ลูกค้าจริงทุกวัน</p>
-<div class="pro4">
-<article><h3 data-i="p1_h">ผู้เชี่ยวชาญวีซ่าตัวจริง</h3><p data-i="p1_p">ทำเรื่องวีซ่าไทยโดยเฉพาะ รู้ว่าแต่ละด่านต้องการอะไรในทางปฏิบัติ</p></article>
-<article><h3 data-i="p2_h">ตรวจก่อน แล้วค่อยทำ</h3><p data-i="p2_p">ดูพาสปอร์ตและเอกสารของคุณก่อน แล้วบอกว่าทำได้ไหม ทำอย่างไร</p></article>
-<article><h3 data-i="p3_h">เตรียมเอกสารให้ทั้งหมด</h3><p data-i="p3_p">แบบฟอร์มและเอกสารเราเตรียมให้ คุณไม่ต้องกรอกเอง</p></article>
-<article><h3 data-i="p4_h">มีพนักงานดูแลหน้างาน</h3><p data-i="p4_p">พนักงานพาเดินทุกขั้นตอนที่สำนักงาน</p></article>
+<div class="finder">
+<h2 data-i="fd_h">หาบริการ<em>ที่ใช่</em>สำหรับคุณ</h2>
+<label for="finder" data-i="fd_l">ฉันต้องการ</label>
+<select id="finder">
+<option value="../extend/" data-i="o1">ต่ออายุวีซ่าอีก 30 วัน</option>
+<option value="../" data-i="o2">ออกนอกประเทศแล้วกลับเข้าไทยในวันเดียว (Visa Run)</option>
+<option value="https://toey99.github.io/visanonb-checklist/" data-i="o3">ทำงานในไทย (Non-B / ใบอนุญาตทำงาน)</option>
+<option value="https://toey99.github.io/retirementvisa/" data-i="o4">เกษียณอยู่ในไทย</option>
+<option value="https://toey99.github.io/thaiwife/" data-i="o5">อยู่กับคู่สมรสชาวไทย</option>
+<option value="https://toey99.github.io/it-square-guide/" data-i="o6">ดูวิธีเดินทางมา IT Square</option>
+</select>
+<button class="btn" type="button" id="finder-go" data-i="fd_b">ดูขั้นตอนและเอกสาร</button>
+<small data-i="fd_s">ไม่แน่ใจว่าต้องทำแบบไหน? กด "ปรึกษาเรา" ได้เลย</small>
+<img src="img/kcounter.webp" alt="" data-alt="alt_k">
 </div>
-<div class="slogan"><b lang="zh">诚信经营 · 用心服务</b><span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span><i lang="en">Integrity in Business, Care in Service</i></div>
 </div></section>
-<section class="final" id="book-now" style="margin-top:56px"><div class="wrap">
-<h2 data-i="fin_h">ไม่แน่ใจว่าต้องทำแบบไหน? ถามเราได้เลย</h2>
-<p data-i="fin_p">ส่งรายละเอียดด้านล่างให้ผู้ที่ส่งลิงก์นี้ให้คุณ เราจะแนะนำตามกรณีของคุณ</p>
-<div class="msg" id="msg" data-i="msg">ปรึกษาเรื่องวีซ่า
+
+<section id="services"><div class="wrap">
+<div class="head"><div class="eyebrow" data-i="svc_eb">บริการของเรา</div><h2 data-i="svc_h">บริการสำหรับ<em>ชาวต่างชาติในไทย</em></h2><p data-i="svc_p">แต่ละบริการมีหน้าของตัวเอง บอกขั้นตอนและเอกสารที่ต้องใช้</p></div>
+<h3 class="sub-h" data-i="g1">บริการวีซ่า</h3><div class="grid"><a class="svc y" href="../extend/"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 11h16M8 4v4M16 4v4M12 13.500v4M10 15.500h4"/></svg></span><span class="tag" data-i="s1_t">ลูกค้าใช้มากที่สุด</span><h3 data-i="s1_h">ต่ออายุวีซ่า 30 วัน</h3><p data-i="s1_p">เสร็จในวันที่ IT Square กรุงเทพฯ ส่งพาสปอร์ตให้เรา ที่เหลือเราจัดการ มีที่นนทบุรี ระยอง พัทยาด้วย</p><span class="go" data-i="go">ดูรายละเอียด →</span></a>
+<a class="svc " href="../"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l18-7-5 14-4-6-9-1zM12 14l4-4"/></svg></span><h3 data-i="s2_h">Visa Run วันเดียวจบ</h3><p data-i="s2_p">บินกรุงเทพฯ–เชียงราย ออกเข้าที่ด่านเชียงแสน กลับในวันเดียว เดินทางได้ทุกวัน คนเดียวก็ออก</p><span class="go" data-i="go">ดูรายละเอียด →</span></a>
+<a class="svc m" href="https://toey99.github.io/visanonb-checklist/"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v11H4zM9 8V5h6v3M4 13h16"/></svg></span><h3 data-i="s5_h">วีซ่าทำงาน Non-B · ใบอนุญาตทำงาน</h3><p data-i="s5_p">รายการเอกสารเปลี่ยนวีซ่า Non-B ในประเทศ ยื่นที่สถานทูต และ บต.32 (WP.32)</p><span class="go" data-i="go">ดูรายละเอียด →</span></a>
+<a class="svc l" href="https://toey99.github.io/retirementvisa/"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></svg></span><h3 data-i="s6_h">วีซ่าเกษียณ (Retirement)</h3><p data-i="s6_p">บริการทำวีซ่าผู้สูงอายุ เอกสารที่ต้องส่งล่วงหน้าและขั้นตอน</p><span class="go" data-i="go">ดูรายละเอียด →</span></a>
+<a class="svc p" href="https://toey99.github.io/thaiwife/"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.500-7-10a4 4 0 017-2.500A4 4 0 0119 10c0 5.500-7 10-7 10z"/></svg></span><h3 data-i="s7_h">วีซ่าคู่สมรสไทย</h3><p data-i="s7_p">ตรวจเอกสารเบื้องต้น แล้วเดินทางไปยื่นที่ ตม. ต่างจังหวัด</p><span class="go" data-i="go">ดูรายละเอียด →</span></a>
+</div>
+<h3 class="sub-h" data-i="g2">คู่มือและรายการเอกสาร</h3><div class="grid"><a class="svc y" href="https://toey99.github.io/extendvisa2nd/"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg></span><h3 data-i="s3_h">ต่อวีซ่า 30 วัน: เอกสารที่ต้องส่งล่วงหน้า</h3><p data-i="s3_p">รายการเอกสารที่ต้องส่งให้เราก่อนวันต่ออายุ และข้อปฏิบัติหน้างาน</p><span class="go" data-i="go">ดูรายละเอียด →</span></a>
+<a class="svc " href="https://toey99.github.io/it-square-guide/"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.200 7-11a7 7 0 10-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></svg></span><h3 data-i="s4_h">คู่มือการเดินทาง IT Square</h3><p data-i="s4_p">วิธีขึ้นมาจุดนัดพบชั้น 3 IT Square หลักสี่ ตอนเช้า พร้อมรูปและแผนที่</p><span class="go" data-i="go">ดูรายละเอียด →</span></a>
+</div>
+<h3 class="sub-h" data-i="g3">ใช้ชีวิตในไทย</h3><div class="grid"><div class="svc soon"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.500"/><path d="M12 7.500V12l3 2"/></svg></span><span class="tag" data-i="soon">เร็ว ๆ นี้</span><h3 data-i="n1_h">รายงานตัว 90 วัน</h3><p data-i="n1_p">แจ้งที่พักอาศัยทุก 90 วันสำหรับผู้ที่อยู่ระยะยาว</p></div>
+<div class="svc soon"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h8M8 4v2M5.500 6c.800 3 3 5.500 6 6.500M10.500 6c-.800 3-3 5.500-6 6.500M13 20l3.500-9 3.500 9M14.200 17h4.600"/></svg></span><span class="tag" data-i="soon">เร็ว ๆ นี้</span><h3 data-i="n2_h">แปลเอกสารพร้อมรับรองคำแปล</h3><p data-i="n2_p">แปลเอกสารราชการเป็นภาษาไทยสำหรับใช้ยื่นหน่วยงาน</p></div>
+<div class="svc soon"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.500"/><path d="M12 8v8M8 12h8"/></svg></span><span class="tag" data-i="soon">เร็ว ๆ นี้</span><h3 data-i="n3_h">บริการอื่นสำหรับชาวต่างชาติในไทย</h3><p data-i="n3_p">เรากำลังเพิ่มบริการด้านการใช้ชีวิตในไทย ต้องการเรื่องใด สอบถามเราได้โดยตรง</p></div>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="band">
+<h2 data-i="bd_h">ทำไมลูกค้าเลือกเรา</h2>
+<div class="stats"><div><b>10,000+</b><span data-i="b1">เคสที่ดูแลมาแล้ว</span></div><div><b>5</b><span data-i="b2">พื้นที่ให้บริการ กรุงเทพฯ นนทบุรี ระยอง พัทยา เชียงแสน</span></div><div><b>3</b><span data-i="b3">ภาษา จีน อังกฤษ ไทย</span></div><div><b data-i="b4b">จ.–ศ.</b><span data-i="b4">อยู่หน้างาน ตม. ทุกวันทำการ</span></div></div>
+</div></div></section>
+
+<section class="alt" id="process"><div class="wrap">
+<div class="head"><div class="eyebrow" data-i="pr_eb">ขั้นตอน</div><h2 data-i="pr_h">ง่าย ๆ <em>4 ขั้นตอน</em></h2></div>
+<div class="steps">
+<article><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><h3 data-i="p1_h">ปรึกษา</h3><p data-i="p1_p">เล่ากรณีของคุณ เราแนะนำว่าควรทำแบบไหน</p></article>
+<article><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg></span><h3 data-i="p2_h">ตรวจเอกสาร</h3><p data-i="p2_p">ส่งหน้าพาสปอร์ตมาให้ตรวจก่อน รู้ผลก่อนเริ่ม</p></article>
+<article><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 13V9a3 3 0 116 0v4h3v4H6v-4zM5 20h14"/></svg></span><h3 data-i="p3_h">เราดำเนินการ</h3><p data-i="p3_p">เตรียมเอกสารและยื่นเรื่องให้ มีพนักงานดูแลหน้างาน</p></article>
+<article><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.500-3 7.500-7 9-4-1.500-7-4.500-7-9V6z"/><path d="M9 12l2.200 2.200L15 10"/></svg></span><h3 data-i="p4_h">รับผล</h3><p data-i="p4_p">รับพาสปอร์ตพร้อมตราประทับกลับบ้าน</p></article>
+</div></div></section>
+
+<section id="why"><div class="wrap why">
+<div class="shots"><img src="img/kcounter.webp" alt="" data-alt="alt_k"><img src="img/st2.webp" alt="" data-alt="alt_s"><img src="img/office2.webp" alt="" data-alt="alt_c"></div>
+<div>
+<div class="eyebrow" data-i="wh_eb">ทำไมต้องเรา</div><h2 data-i="wh_h" style="font-size:clamp(26px,4.6vw,36px);margin-top:6px">ประสบการณ์จากกว่า 10,000 เคส</h2>
+<ul>
+<li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3.200"/><path d="M3 20c0-3.300 2.700-6 6-6s6 2.700 6 6M16 6.200a3 3 0 010 5.600M17.500 14.500c2 .800 3.500 2.800 3.500 5.500"/></svg></span><div><b data-i="w1_h">ผู้เชี่ยวชาญวีซ่าตัวจริง</b><span data-i="w1_p">ทำเรื่องวีซ่าไทยโดยเฉพาะ รู้ว่าแต่ละด่านต้องการอะไรในทางปฏิบัติ</span></div></li>
+<li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.500-3 7.500-7 9-4-1.500-7-4.500-7-9V6z"/><path d="M9 12l2.200 2.200L15 10"/></svg></span><div><b data-i="w2_h">ตรวจก่อน แล้วค่อยทำ</b><span data-i="w2_p">ดูพาสปอร์ตและเอกสารก่อน แล้วบอกว่าทำได้ไหม ทำอย่างไร</span></div></li>
+<li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg></span><div><b data-i="w3_h">เตรียมเอกสารให้ทั้งหมด</b><span data-i="w3_p">แบบฟอร์มและเอกสารเราเตรียมให้ คุณไม่ต้องกรอกเอง</span></div></li>
+<li><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.200 7-11a7 7 0 10-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></svg></span><div><b data-i="w4_h">มีพนักงานดูแลหน้างาน</b><span data-i="w4_p">พนักงานพาเดินทุกขั้นตอนที่สำนักงาน</span></div></li>
+</ul><div class="slogan"><b lang="zh">诚信经营 · 用心服务</b><span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span><i lang="en">Integrity in Business, Care in Service</i></div>
+</div></div></section>
+
+<section class="contact" id="book-now"><div class="wrap">
+<div><h2 data-i="fin_h">ไม่แน่ใจว่าต้องทำแบบไหน? ถามเราได้เลย</h2><p data-i="fin_p">ส่งรายละเอียดนี้ให้ผู้ที่ส่งลิงก์นี้ให้คุณ เราจะแนะนำตามกรณีของคุณ</p></div>
+<div class="msgbox"><div class="msg" id="msg" data-i="msg">ปรึกษาเรื่องวีซ่า
 สัญชาติ:
 วีซ่าปัจจุบัน / วันหมดอายุ:
 บริการที่ต้องการ:
 (แนบหน้าพาสปอร์ตและตราเข้าล่าสุด)</div>
-<div class="cta-row"><button class="btn" type="button" id="copy" data-i="copy">คัดลอกข้อความนี้</button><span class="copied" id="copied" role="status"></span></div>
-<div class="slogan on-sky"><b lang="zh">诚信经营 · 用心服务</b><span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span><i lang="en">Integrity in Business, Care in Service</i></div>
-<div class="fbrand"><img src="img/logo.png" alt=""><div><b>ABC : Alliance Border Consulting</b><span data-i="fb">ผู้เชี่ยวชาญด้านไทยวีซ่า · ให้คำปรึกษาชาวต่างชาติใช้ชีวิตในไทย</span></div></div>
-<p class="foot" data-i="foot">ภาพเพื่อการโฆษณา รายละเอียดและค่าบริการโปรดสอบถามจากเจ้าหน้าที่ฝ่ายดูแลลูกค้าเท่านั้น</p>
+<div class="cta-row" style="margin-top:14px"><button class="btn" type="button" id="copy" data-i="copy">คัดลอกข้อความนี้</button><span class="copied" id="copied" role="status"></span></div></div>
 </div></section>
 </main>
+<footer><div class="wrap">
+<div class="fgrid">
+<div><div class="fbrand"><img src="img/logo.png" alt=""><b>ABC : Alliance Border Consulting</b></div><p data-i="ft_p">ผู้เชี่ยวชาญด้านไทยวีซ่า ให้คำปรึกษาชาวต่างชาติใช้ชีวิตในไทย</p></div>
+<div><h3 data-i="g1">บริการวีซ่า</h3><a href="../extend/" data-i="s1_h">ต่ออายุวีซ่า 30 วัน</a><a href="../" data-i="s2_h">Visa Run วันเดียวจบ</a><a href="https://toey99.github.io/visanonb-checklist/" data-i="s5_h">วีซ่าทำงาน Non-B · ใบอนุญาตทำงาน</a><a href="https://toey99.github.io/retirementvisa/" data-i="s6_h">วีซ่าเกษียณ (Retirement)</a><a href="https://toey99.github.io/thaiwife/" data-i="s7_h">วีซ่าคู่สมรสไทย</a></div>
+<div><h3 data-i="g2">คู่มือและรายการเอกสาร</h3><a href="https://toey99.github.io/extendvisa2nd/" data-i="s3_h">ต่อวีซ่า 30 วัน: เอกสารที่ต้องส่งล่วงหน้า</a><a href="https://toey99.github.io/it-square-guide/" data-i="s4_h">คู่มือการเดินทาง IT Square</a></div>
+<div class="fs"><b lang="zh">诚信经营 · 用心服务</b><span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span><br><i lang="en">Integrity in Business, Care in Service</i></div>
+</div>
+<p class="foot" data-i="foot">ภาพเพื่อการโฆษณา รายละเอียดและค่าบริการโปรดสอบถามจากเจ้าหน้าที่ฝ่ายดูแลลูกค้าเท่านั้น</p>
+</div></footer>
 <script>
 (function(){
-var T={zh:{hero_eb:"泰国签证专家",hero_h1:"泰国签证，<em>交给专业团队</em>",st_n:"个案例以上",hero_p:"我们是泰国签证方面的专业团队，为在泰国生活的外国人提供咨询和全程代办：延期、Visa Run、工作签、养老签、配偶签。",c1:"泰国签证专家",c2:"在泰生活咨询",c3:"全程代办",c4:"中文 · English · ไทย",cta:"查看全部服务",cta_note:"选择服务，查看流程和所需材料",svc_eb:"我们的服务",svc_h:"选择您需要的服务",svc_p:"每项服务都有独立页面，写明流程和所需材料。",s1_t:"最多人办理",s1_h:"续签 30 天",s1_p:"曼谷 IT Square 当天办完。把护照交给我们，其余我们办。也服务暖武里府、罗勇府、芭提雅。",s2_h:"Visa Run 一日往返",s2_p:"曼谷飞清莱，清盛口岸出入境，当天返回。每天可出发，1人成团。",s3_h:"续签 30 天：需提前发送的材料",s3_p:"办理延期前要提前发给我们的材料，以及现场注意事项。",s4_h:"IT Square 路线指南",s4_p:"早上如何到 IT Square Laksi 三楼集合点，附照片和地图。",s5_h:"Non-B 工作签证 · 工作许可",s5_p:"Non-B 境内转签、使馆申请、WP.32（บต.32）所需材料清单。",s6_h:"养老签证",s6_p:"养老签证办理服务：需提前发送的材料和流程。",s7_h:"泰国配偶签证",s7_p:"泰国配偶签证服务：先初审材料，再前往外府移民局办理。",s8_h:"更多服务即将上线",s8_p:"其他服务的详细页面陆续增加。需要其他业务，请直接咨询我们。",go:"查看详情 →",pro_eb:"为什么选择我们",pro_h:"10,000+ 个案例的经验",pro_p:"每个工作日我们都在移民局现场，为客户办理业务。",p1_h:"真正的签证专家",p1_p:"专注泰国签证，熟悉各移民局的实际要求。",p2_h:"先审核，再办理",p2_p:"先看您的护照和材料，再告诉您能不能办、怎么办。",p3_h:"文件全部代办",p3_p:"表格和材料由我们准备，您不用自己填。",p4_h:"现场有人陪同",p4_p:"工作人员在现场带您走完每一步。",fin_h:"不确定该办哪一种？直接问我们",fin_p:"把下面的信息发给把这个链接发给您的联系人，我们根据您的情况给出建议。",msg:"签证咨询\n国籍：\n目前签证类型 / 到期日：\n想办理的业务：\n（附护照首页和最近的入境章）",copy:"复制这段信息",copied:"已复制，可直接粘贴到聊天中。",copyfail:"请长按上方文字手动复制。",fb:"泰国签证专家 · 为在泰外国人提供咨询",foot:"图片仅供宣传。服务详情及费用，请仅向客服人员确认。",alt_hero:"曼谷 IT Square 移民局 K Counter",alt_ext:"移民局 K Counter",alt_run:"乘船过湄公河",title:"ABC 泰国签证服务"},en:{hero_eb:"THAI VISA SPECIALISTS",hero_h1:"Thai visas, <em>handled by specialists</em>",st_n:"cases and counting",hero_p:"We are Thai visa specialists who advise foreigners living in Thailand and handle the process end to end: extensions, visa runs, work, retirement and spouse visas.",c1:"Thai visa specialists",c2:"Advice for life in Thailand",c3:"Full service",c4:"中文 · English · ไทย",cta:"See all services",cta_note:"Pick a service to see the steps and documents",svc_eb:"Our services",svc_h:"Choose the service you need",svc_p:"Each service has its own page with the steps and the documents required.",s1_t:"Most requested",s1_h:"30-day visa extension",s1_p:"Done the same day at IT Square, Bangkok. Hand us your passport and we do the rest. Also Nonthaburi, Rayong and Pattaya.",s2_h:"One-day visa run",s2_p:"Fly Bangkok to Chiang Rai, cross at Chiang Saen and return the same day. Every day, even for one traveller.",s3_h:"30-day extension: documents to send ahead",s3_p:"What to send us before your extension, and the rules to follow on the day.",s4_h:"IT Square route guide",s4_p:"How to reach the 3rd-floor meeting point at IT Square Laksi in the morning, with photos and maps.",s5_h:"Non-B work visa and work permit",s5_p:"Document checklists for an in-country Non-B change, an embassy application and WP.32.",s6_h:"Retirement visa",s6_p:"Retirement visa service: documents to send in advance and the process.",s7_h:"Thai spouse visa",s7_p:"Thai spouse visa service: an initial document check, then trips to a provincial immigration office.",s8_h:"More services coming",s8_p:"Detailed pages for other services are being added. Ask us directly for anything not listed.",go:"View details →",pro_eb:"Why us",pro_h:"Experience from 10,000+ cases",pro_p:"We are on site at immigration every working day, handling cases for our customers.",p1_h:"Real visa specialists",p1_p:"Thai visas are all we do, and we know what each office asks for in practice.",p2_h:"Checked before we start",p2_p:"We look at your passport and documents first, then tell you what is possible and how.",p3_h:"Paperwork prepared",p3_p:"We prepare the forms and documents, so you have nothing to fill in.",p4_h:"Staff with you on site",p4_p:"Our staff walk you through each step at the office.",fin_h:"Not sure which one you need? Ask us",fin_p:"Send the details below to the person who shared this link and we will advise on your case.",msg:"Visa enquiry\nNationality:\nCurrent visa type / expiry date:\nService needed:\n(Passport page and latest entry stamp attached)",copy:"Copy this message",copied:"Copied. Paste it into your chat.",copyfail:"Press and hold the text above to copy it.",fb:"Thai visa specialists · Advice for foreigners living in Thailand",foot:"Images are for promotional use. Please confirm service details and fees with our customer service staff only.",alt_hero:"Immigration K Counter at IT Square, Bangkok",alt_ext:"Immigration K Counter",alt_run:"Boat crossing the Mekong",title:"ABC Thai Visa Services"},th:{copied:"คัดลอกแล้ว วางในแชตได้เลย",copyfail:"กดค้างที่ข้อความด้านบนเพื่อคัดลอก",alt_hero:"ตม. K Counter IT Square กรุงเทพฯ",alt_ext:"ตม. K Counter",alt_run:"นั่งเรือข้ามแม่น้ำโขง",title:"ABC บริการวีซ่าไทย"}};
+var T={zh:{u1:"个已办理案例",u2:"泰国签证专家",u3:"周一至周五，每个工作日",nv1:"服务",nv2:"流程",nv3:"为什么选我们",nv4:"咨询我们",hero_eb:"泰国签证专家",hero_h1:"在泰国安心生活，<em>签证交给我们</em>",hero_p:"我们为在泰国生活的外国人提供咨询和全程代办：延期、Visa Run、工作签、养老签、配偶签。",cta1:"咨询我们",cta2:"查看全部服务",t1:"已办理 10,000+ 个案例",t2:"泰国签证专业团队",t3:"文件全部代办",t4:"诚信透明",fd_h:"找到<em>适合您</em>的服务",fd_l:"我想要",o1:"把签证再延长 30 天",o2:"当天出境再入境（Visa Run）",o3:"在泰国工作（Non-B / 工作许可）",o4:"在泰国养老",o5:"与泰籍配偶一起生活",o6:"查看到 IT Square 的路线",fd_b:"查看流程和材料",fd_s:"不确定该办哪一种？点“咨询我们”。",svc_eb:"我们的服务",svc_h:"为<em>在泰外国人</em>提供的服务",svc_p:"每项服务都有独立页面，写明流程和所需材料。",g1:"签证服务",g2:"指南与材料清单",g3:"在泰生活",go:"查看详情 →",soon:"即将上线",s1_t:"最多人办理",s1_h:"续签 30 天",s1_p:"曼谷 IT Square 当天办完。把护照交给我们，其余我们办。也服务暖武里府、罗勇府、芭提雅。",s2_h:"Visa Run 一日往返",s2_p:"曼谷飞清莱，清盛口岸出入境，当天返回。每天可出发，1人成团。",s3_h:"续签 30 天：需提前发送的材料",s3_p:"办理延期前要提前发给我们的材料，以及现场注意事项。",s4_h:"IT Square 路线指南",s4_p:"早上如何到 IT Square Laksi 三楼集合点，附照片和地图。",s5_h:"Non-B 工作签证 · 工作许可",s5_p:"Non-B 境内转签、使馆申请、WP.32（บต.32）所需材料清单。",s6_h:"养老签证",s6_p:"养老签证办理服务：需提前发送的材料和流程。",s7_h:"泰国配偶签证",s7_p:"先初审材料，再前往外府移民局办理。",n1_h:"90 天报到",n1_p:"长期居留者每 90 天一次的住址报到。",n2_h:"文件翻译及翻译认证",n2_p:"把官方文件翻译成泰文，用于向政府部门递交。",n3_h:"更多在泰生活服务",n3_p:"我们正在增加在泰生活相关的服务。有其他需要，请直接咨询我们。",bd_h:"客户为什么选择我们",b1:"个已办理案例",b2:"个服务地区：曼谷、暖武里、罗勇、芭提雅、清盛",b3:"种语言：中文、英文、泰文",b4b:"周一至周五",b4:"每个工作日都在移民局现场",pr_eb:"流程",pr_h:"简单 <em>4 步</em>",p1_h:"咨询",p1_p:"告诉我们您的情况，我们建议怎么办。",p2_h:"审核材料",p2_p:"先把护照页发给我们审核，开始前就知道结果。",p3_h:"我们代办",p3_p:"准备文件并递交申请，现场有工作人员陪同。",p4_h:"拿到结果",p4_p:"带着盖好章的护照回家。",wh_eb:"为什么选择我们",wh_h:"10,000+ 个案例的经验",w1_h:"真正的签证专家",w1_p:"专注泰国签证，熟悉各移民局的实际要求。",w2_h:"先审核，再办理",w2_p:"先看护照和材料，再告诉您能不能办、怎么办。",w3_h:"文件全部代办",w3_p:"表格和材料由我们准备，您不用自己填。",w4_h:"现场有人陪同",w4_p:"工作人员在现场带您走完每一步。",fin_h:"不确定该办哪一种？直接问我们",fin_p:"把这段信息发给把这个链接发给您的联系人，我们根据您的情况给出建议。",msg:"签证咨询\n国籍：\n目前签证类型 / 到期日：\n想办理的业务：\n（附护照首页和最近的入境章）",copy:"复制这段信息",copied:"已复制，可直接粘贴到聊天中。",copyfail:"请长按上方文字手动复制。",ft_p:"泰国签证专家，为在泰生活的外国人提供咨询。",foot:"图片仅供宣传。服务详情及费用，请仅向客服人员确认。",alt_k:"曼谷 IT Square 移民局 K Counter",alt_s:"护照上的延期章",alt_c:"客户在集合点，面部已模糊",title:"ABC 泰国签证服务"},en:{u1:"cases handled",u2:"Thai visa specialists",u3:"Monday to Friday, every working day",nv1:"Services",nv2:"Process",nv3:"Why us",nv4:"Talk to us",hero_eb:"THAI VISA SPECIALISTS",hero_h1:"Live in Thailand with peace of mind. <em>We handle the visa.</em>",hero_p:"We advise foreigners living in Thailand and handle the process end to end: extensions, visa runs, work, retirement and spouse visas.",cta1:"Talk to us",cta2:"See all services",t1:"10,000+ cases handled",t2:"Thai visa specialist team",t3:"All paperwork prepared",t4:"Honest and transparent",fd_h:"Find the <em>right service</em> for you",fd_l:"I want to",o1:"Extend my visa by 30 days",o2:"Leave and re-enter in one day (visa run)",o3:"Work in Thailand (Non-B / work permit)",o4:"Retire in Thailand",o5:"Live with my Thai spouse",o6:"See how to get to IT Square",fd_b:"See steps and documents",fd_s:"Not sure which one you need? Tap “Talk to us”.",svc_eb:"Our services",svc_h:"Services for <em>foreigners in Thailand</em>",svc_p:"Each service has its own page with the steps and the documents required.",g1:"Visa services",g2:"Guides and checklists",g3:"Life in Thailand",go:"View details →",soon:"Coming soon",s1_t:"Most requested",s1_h:"30-day visa extension",s1_p:"Done the same day at IT Square, Bangkok. Hand us your passport and we do the rest. Also Nonthaburi, Rayong and Pattaya.",s2_h:"One-day visa run",s2_p:"Fly Bangkok to Chiang Rai, cross at Chiang Saen and return the same day. Every day, even for one traveller.",s3_h:"30-day extension: documents to send ahead",s3_p:"What to send us before your extension, and the rules to follow on the day.",s4_h:"IT Square route guide",s4_p:"How to reach the 3rd-floor meeting point at IT Square Laksi in the morning, with photos and maps.",s5_h:"Non-B work visa and work permit",s5_p:"Document checklists for an in-country Non-B change, an embassy application and WP.32.",s6_h:"Retirement visa",s6_p:"Retirement visa service: documents to send in advance and the process.",s7_h:"Thai spouse visa",s7_p:"An initial document check, then trips to a provincial immigration office.",n1_h:"90-day report",n1_p:"The address report every 90 days for long-stay residents.",n2_h:"Certified document translation",n2_p:"Official documents translated into Thai for submission to government offices.",n3_h:"More services for life in Thailand",n3_p:"We are adding services for everyday life in Thailand. Ask us directly for anything not listed.",bd_h:"Why customers choose us",b1:"cases handled",b2:"service areas: Bangkok, Nonthaburi, Rayong, Pattaya, Chiang Saen",b3:"languages: Chinese, English, Thai",b4b:"Mon–Fri",b4:"On site at immigration every working day",pr_eb:"Process",pr_h:"Four <em>simple steps</em>",p1_h:"Consultation",p1_p:"Tell us your situation and we advise on the right route.",p2_h:"Document check",p2_p:"Send your passport pages first and know the result before you start.",p3_h:"We handle it",p3_p:"We prepare and submit the paperwork, with staff beside you on site.",p4_h:"Result",p4_p:"Take your stamped passport home.",wh_eb:"Why us",wh_h:"Experience from 10,000+ cases",w1_h:"Real visa specialists",w1_p:"Thai visas are all we do, and we know what each office asks for in practice.",w2_h:"Checked before we start",w2_p:"We look at your passport and documents first, then tell you what is possible and how.",w3_h:"Paperwork prepared",w3_p:"We prepare the forms and documents, so you have nothing to fill in.",w4_h:"Staff with you on site",w4_p:"Our staff walk you through each step at the office.",fin_h:"Not sure which one you need? Ask us",fin_p:"Send this message to the person who shared this link and we will advise on your case.",msg:"Visa enquiry\nNationality:\nCurrent visa type / expiry date:\nService needed:\n(Passport page and latest entry stamp attached)",copy:"Copy this message",copied:"Copied. Paste it into your chat.",copyfail:"Press and hold the text above to copy it.",ft_p:"Thai visa specialists advising foreigners on life in Thailand.",foot:"Images are for promotional use. Please confirm service details and fees with our customer service staff only.",alt_k:"Immigration K Counter at IT Square, Bangkok",alt_s:"Extension stamp in a passport",alt_c:"Customers at the meeting point, faces blurred",title:"ABC Thai Visa Services"},th:{copied:"คัดลอกแล้ว วางในแชตได้เลย",copyfail:"กดค้างที่ข้อความด้านบนเพื่อคัดลอก",alt_k:"ตม. K Counter IT Square กรุงเทพฯ",alt_s:"ตราต่ออายุในพาสปอร์ต",alt_c:"ลูกค้าที่จุดนัดพบ เบลอใบหน้าแล้ว",title:"ABC บริการวีซ่าไทย"}};
 var nodes=document.querySelectorAll("[data-i]");
 nodes.forEach(function(n){var k=n.getAttribute("data-i");if(!(k in T.th))T.th[k]=n.innerHTML;});
 var cur="th";
@@ -292,7 +233,7 @@ document.querySelectorAll("[data-lang]").forEach(function(b){b.addEventListener(
 });});
 window.addEventListener("hashchange",function(){var h=location.hash.replace("#","");if(T[h])apply(h);});
 document.querySelectorAll("[data-go]").forEach(function(b){b.addEventListener("click",function(){
-  document.getElementById(b.getAttribute("data-go")==="svc"?"svc":"book-now").scrollIntoView({behavior:"smooth",block:"start"});});});
+  document.getElementById(b.getAttribute("data-go")).scrollIntoView({behavior:"smooth",block:"start"});});});
 document.getElementById("copy").addEventListener("click",function(){
   var out=document.getElementById("copied"),txt=document.getElementById("msg").textContent;
   function ok(){out.textContent=T[cur].copied;}
@@ -301,6 +242,8 @@ document.getElementById("copy").addEventListener("click",function(){
 });
 apply(pick());
 })();
+
+(function(){var s=document.getElementById("finder"),g=document.getElementById("finder-go");if(s&&g)g.addEventListener("click",function(){if(s.value)location.href=s.value;});})();
 </script>
 </body>
 </html>
