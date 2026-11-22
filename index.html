@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Visa Run วันเดียวจบ เชียงราย–เชียงแสน เดินทางได้ทุกวัน คนเดียวก็ออก · ABC : Alliance Border Consulting">
+<meta property="og:title" content="Visa Run วันเดียวจบ · 一日往返 · One-Day Visa Run">
+<meta property="og:description" content="เดินทางได้ทุกวัน คนเดียวก็ออก · 每天可出发，1人成团">
+<meta property="og:image" content="img/hero.webp">
+<link rel="icon" href="img/logo.png">
+<title>Visa Run วันเดียวจบ เชียงราย</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: one bright river-day story. Sky-blue hero, a single vertical timeline rail
+   that carries the traveller from landing to take-off, sunny yellow for every action. */
+:root{
+  color-scheme: light;
+  --sky:#1a8cff;        /* Mekong-day sky, main brand colour */
+  --sky-soft:#e3f2ff;   /* pastel sky for panels */
+  --sun:#ffcf3f;        /* action colour: buttons, time chips */
+  --sun-soft:#fff5cf;
+  --mint:#d5f5e6;       /* "included / ok" */
+  --mint-ink:#0b7a52;
+  --coral:#ff6b5e;      /* warnings only */
+  --coral-soft:#ffe6e2;
+  --ink:#14315c;        /* text */
+  --ink-2:#4c6485;      /* secondary text */
+  --paper:#f6fbff;      /* page background */
+  --card:#ffffff;
+  --line:#cfe4f8;
+  --font-display:"Prompt","Noto Sans SC","Noto Sans Thai",system-ui,sans-serif;
+  --font-body:"Sarabun","Noto Sans SC","Noto Sans Thai",system-ui,sans-serif;
+  --r:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
+html[lang="zh"] body{--font-display:"Noto Sans SC","Prompt",system-ui,sans-serif;--font-body:"Noto Sans SC","Sarabun",system-ui,sans-serif;line-height:1.75}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--font-display);line-height:1.25;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.eyebrow{font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--sky)}
+h2{font-size:clamp(26px,4.4vw,36px);font-weight:700;margin-top:6px}
+.lede{color:var(--ink-2);max-width:60ch;margin-top:10px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:16px;white-space:nowrap}
+.brand img{height:40px;width:auto;flex:none}
+.bn{display:grid;line-height:1.15}
+.bn b{font-size:17px;letter-spacing:.04em}
+.bn small{font:500 11.5px var(--font-display);color:var(--ink-2);white-space:nowrap}
+.lang{display:flex;background:var(--sky-soft);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;font:600 14px var(--font-display);color:var(--ink-2);padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--sky);color:#fff}
+
+/* hero */
+.hero{padding:28px 0 40px;background:linear-gradient(180deg,#dff0ff 0%,var(--paper) 100%)}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero h1{font-size:clamp(34px,8vw,58px);font-weight:700;margin:10px 0 14px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero p.sub{font-size:18px;color:var(--ink-2);max-width:52ch}
+.tagline{display:inline-block;background:var(--sun);font:700 clamp(19px,4.6vw,26px)/1.3 var(--font-display);padding:8px 18px;border-radius:14px;margin:0 0 16px;transform:rotate(-1.5deg)}
+.chips{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{background:#fff;border:1.5px solid var(--sky);color:var(--sky);font:600 14px var(--font-display);padding:5px 12px;border-radius:999px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--sun);color:var(--ink);font:700 17px var(--font-display);padding:14px 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 6px 0 #e3ac10;transition:transform .12s, box-shadow .12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #e3ac10}
+.btn:active{transform:translateY(6px);box-shadow:0 0 0 #e3ac10}
+.cta-note{font-size:15px;color:var(--ink-2)}
+.hero-photo{position:relative;max-width:440px;width:100%;justify-self:center}
+.hero-photo::before{content:"";position:absolute;inset:18px -14px -14px 18px;background:var(--sun);border-radius:36px;z-index:0}
+.hero-photo img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:32px;border:5px solid #fff}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.fact b{display:block;font:700 28px/1.1 var(--font-display);color:var(--sky);font-variant-numeric:tabular-nums}
+.fact span{display:block;margin-top:6px;font-size:15px;color:var(--ink-2);line-height:1.45}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:24px}
+.who article{border-radius:var(--r);padding:20px;background:var(--card);border:1px solid var(--line)}
+.who article.ok{background:var(--mint);border-color:transparent}
+.who article.extra{background:var(--sun-soft);border-color:transparent}
+.who h3{font-size:19px;font-weight:600;display:flex;align-items:center;gap:8px}
+.who p{margin-top:8px;font-size:16px}
+.tag{font:600 12px var(--font-display);padding:3px 10px;border-radius:999px;background:#fff}
+.ok .tag{color:var(--mint-ink)} .extra .tag{color:#8a5a00}
+.ext{display:grid;gap:18px;align-items:center;margin-top:14px;background:var(--sky);color:#fff;border-radius:var(--r);padding:22px}
+.ext-n{background:var(--sun);color:var(--ink);border-radius:16px;padding:14px 18px;text-align:center;justify-self:start}
+.ext-n b{display:block;font:700 30px/1.1 var(--font-display);white-space:nowrap}
+.ext-n span{font:600 14px var(--font-display)}
+.ext h3{font-size:21px;font-weight:600;color:#fff}
+.ext p{margin:8px 0 12px;color:#eaf5ff;font-size:16px}
+.ext .list li{color:#fff}
+@media (min-width:700px){.ext{grid-template-columns:auto 1fr;gap:26px;padding:26px}}
+.fine{font-size:14px;color:var(--ink-2);margin-top:14px}
+
+/* timeline */
+.day{background:#fff;border-block:1px solid var(--line)}
+.steps{list-style:none;margin:32px 0 0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:4px;border-radius:4px;background:repeating-linear-gradient(180deg,var(--sky) 0 10px,transparent 10px 18px)}
+.step{position:relative;padding:0 0 40px 58px;display:grid;gap:16px}
+.step:last-child{padding-bottom:0}
+.num{position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--sky);color:#fff;font:700 18px/42px var(--font-display);text-align:center;border:4px solid #fff;box-shadow:0 0 0 2px var(--sky)}
+.time{display:inline-block;font:600 14px var(--font-display);background:var(--sun);padding:3px 12px;border-radius:999px;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.step h3{font-size:22px;font-weight:600}
+.step p{color:var(--ink-2);margin-top:6px;max-width:52ch}
+.shots{display:grid;gap:10px;grid-template-columns:1fr}
+.shots.two{grid-template-columns:1fr 1fr}
+.shots img{width:100%;object-fit:cover;border-radius:18px;background:var(--sky-soft)}
+.r45{aspect-ratio:4/5}.r54{aspect-ratio:5/4}.r43{aspect-ratio:4/3}
+
+/* booking */
+.book3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:26px;counter-reset:b}
+.book3 article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px;counter-increment:b}
+.book3 article::before{content:counter(b);display:block;font:700 40px/1 var(--font-display);color:var(--sun);-webkit-text-stroke:1.5px var(--ink);margin-bottom:12px}
+.book3 h3{font-size:18px;font-weight:600}
+.book3 p{font-size:16px;color:var(--ink-2);margin-top:8px}
+
+.two-col{display:grid;gap:16px;margin-top:26px}
+.panel{background:var(--sky-soft);border-radius:var(--r);padding:22px}
+.panel.sun{background:var(--sun-soft)}
+.panel h3{font-size:19px;font-weight:600;margin-bottom:10px}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.list li{position:relative;padding-left:28px;font-size:16px;line-height:1.5}
+.list li::before{content:"";position:absolute;left:0;top:.28em;width:18px;height:18px;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.6L13 6.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px}
+.list.x li::before{background:var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M6 6l6 6M12 6l-6 6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/18px}
+.list.dot li::before{background:var(--sun);border:2px solid var(--ink);width:10px;height:10px;top:.5em;left:4px}
+.sub-h{font:600 14px var(--font-display);color:var(--ink-2);margin:18px 0 8px}
+
+.pro{background:var(--sky-soft)}
+.pro4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:26px}
+.pro4 article{background:var(--card);border-radius:var(--r);padding:20px;border-top:6px solid var(--sun)}
+.pro4 h3{font-size:18px;font-weight:600}
+.pro4 p{font-size:16px;color:var(--ink-2);margin-top:8px}
+.pro + section{padding-top:56px !important}
+.slogan{margin-top:28px;display:grid;gap:4px;justify-items:center;text-align:center;background:var(--card);border-radius:var(--r);padding:20px 16px;border:2px dashed var(--sky)}
+.slogan b{font:700 clamp(22px,5.4vw,30px)/1.3 "Noto Sans SC",var(--font-display);color:var(--sky);letter-spacing:.06em}
+.slogan span{font:600 clamp(17px,4.2vw,21px)/1.4 "Prompt",var(--font-display);color:var(--ink)}
+.slogan i{font:500 15px/1.4 "Prompt",var(--font-display);color:var(--ink-2)}
+.slogan.on-sky{background:transparent;border-color:rgba(255,255,255,.6);margin-top:34px;max-width:480px}
+.slogan.on-sky b{color:var(--sun)} .slogan.on-sky span{color:#fff} .slogan.on-sky i{color:#d6ebff}
+.fbrand{display:flex;align-items:center;gap:14px;margin-top:26px}
+.fbrand img{height:64px;width:auto;background:#fff;border-radius:14px;padding:8px 10px}
+.fbrand b{display:block;font:700 18px/1.3 var(--font-display);color:#fff}
+.fbrand span{font-size:14px;color:#d6ebff}
+.final .fbrand + .foot{margin-top:14px}
+/* gallery */
+.gal{columns:2;column-gap:10px;margin-top:24px}
+.gal img{width:100%;height:auto;border-radius:16px;margin:0 0 10px;break-inside:avoid;background:var(--sky-soft)}
+@media (min-width:620px){.gal{columns:3}}
+@media (min-width:960px){.gal{columns:4}}
+
+/* final */
+.final{background:var(--sky);color:#fff;border-radius:32px 32px 0 0;padding:56px 0 110px}
+.final h2{color:#fff}
+.final p{max-width:58ch;margin-top:12px;color:#eaf5ff}
+.msg{background:#fff;color:var(--ink);border-radius:16px;padding:16px 18px;margin-top:22px;white-space:pre-wrap;font-size:16px;line-height:1.7;max-width:480px;user-select:all}
+.final .cta-row{margin-top:18px}
+.copied{font-weight:700;min-height:1.6em}
+.foot{font-size:13px;color:#d6ebff;margin-top:34px;max-width:70ch}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);border-top:1px solid var(--line);display:flex;justify-content:center}
+.sticky .btn{width:100%;max-width:440px;justify-content:center;padding:12px 20px;box-shadow:0 4px 0 #e3ac10}
+
+@media (min-width:820px){
+  section{padding:76px 0}
+  .hero{padding:48px 0 56px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:48px}
+  .facts{grid-column:1/-1}
+  .step{grid-template-columns:1fr 1fr;gap:32px;padding-bottom:56px;align-items:start}
+  .step .shots:empty{display:none}
+  .two-col{grid-template-columns:1fr 1fr}
+  .sticky{display:none}
+  .final{padding-bottom:64px}
+}
+@media (max-width:420px){
+  .bn small{font-size:10.5px}.brand img{height:34px}
+  .lang button{padding:6px 9px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><img src="img/logo.png" alt="ABC"><span class="bn"><b>ABC</b><small>Alliance Border Consulting</small></span></div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="th" aria-pressed="true">ไทย</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-i="hero_eb">VISA RUN · เชียงราย – เชียงแสน</div>
+      <h1 data-i="hero_h1">Visa Run วันเดียวจบ<br><em>ไปเช้า เย็นกลับ</em></h1>
+      <p class="tagline" data-i="tag">เดินทางได้ทุกวัน คนเดียวก็ออก</p>
+      <p class="sub" data-i="hero_p">บินจากกรุงเทพฯ ไปเชียงราย ข้ามแม่น้ำโขงที่ด่านเชียงแสน แล้วกลับเข้าไทยพร้อมตราประทับใหม่ในวันเดียวกัน ทีมงานดูแลตั้งแต่รับที่สนามบินจนส่งกลับ</p>
+      <ul class="chips">
+        <li data-i="c1">ไป–กลับวันเดียว</li>
+        <li data-i="c2">ดูแลตั้งแต่ลงเครื่อง</li>
+        <li data-i="c3">ตรวจพาสปอร์ตก่อน</li>
+        <li data-i="c4">ไม่ต้องรอรวมกลุ่ม</li>
+        <li data-i="c5">ไม่มีวันหยุด</li>
+      </ul>
+      <div class="cta-row">
+        <button class="btn" type="button" data-go="book" data-i="cta">ส่งพาสปอร์ตมาตรวจสอบก่อน</button>
+        <span class="cta-note" data-i="cta_note">ตรวจผ่านแล้วค่อยชำระเงิน</span>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="img/hero.webp" alt="" data-alt="alt_hero"></div>
+    <div class="facts">
+      <div class="fact"><b>09:30</b><span data-i="f1">รถเริ่มรับที่สนามบินเชียงราย ไฟลต์แรก 09:30–10:00 น. ทุกวัน ไม่มีวันหยุด</span></div>
+      <div class="fact"><b>19:00+</b><span data-i="f2">แนะนำจองขากลับหลัง 1 ทุ่ม เราส่งถึงสนามบินให้เร็วที่สุด</span></div>
+      <div class="fact"><b data-i="f3b">30 วัน</b><span data-i="f3">สัญชาติจีนได้ ผผ.30 กลับมาภายในวันเดียว</span></div>
+      <div class="fact"><b data-i="f4b">60 วัน</b><span data-i="f4">เลือกต่ออายุอีก 30 วันในวันเดียวกันได้ (บริการเสริม)</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow" data-i="who_eb">ก่อนจอง</div>
+    <h2 data-i="who_h">ใครใช้บริการนี้ได้</h2>
+    <div class="who">
+      <article class="ok">
+        <h3><span data-i="who1_h">หนังสือเดินทางจีน</span><span class="tag" data-i="who1_t">รับทันที</span></h3>
+        <p data-i="who1_p">กลับเข้าไทยแบบฟรีวีซ่า ได้ ผผ.30 พำนักได้ 30 วัน เสร็จภายในวันเดินทาง</p>
+      </article>
+      <article>
+        <h3><span data-i="who2_h">สัญชาติอื่น</span><span class="tag" data-i="who2_t" style="background:var(--sky-soft);color:var(--sky)">ตรวจก่อน</span></h3>
+        <p data-i="who2_p">ส่งหน้าพาสปอร์ตทุกหน้ามาให้เราตรวจ แล้วเราจะแจ้งค่าบริการให้อีกครั้ง</p>
+      </article>
+      <article class="extra">
+        <h3><span data-i="who3_h">มีค่าบริการเพิ่มเติม</span><span class="tag" data-i="who3_t">สอบถามก่อน</span></h3>
+        <ul class="list dot" style="margin-top:10px">
+          <li data-i="x1">มีประวัติเดินทางเข้าออกกัมพูชา</li>
+          <li data-i="x2">Overstay</li>
+          <li data-i="x3">บริการ VIP เดี่ยว หรือเดินทางนอกช่วงเวลา</li>
+        </ul>
+      </article>
+    </div>
+    <div class="ext">
+      <div class="ext-n"><b>30 + 30</b><span data-i="ext_n">รวมอยู่ได้ 60 วัน</span></div>
+      <div>
+        <h3 data-i="ext_h">ต่ออายุอีก 30 วัน จบในวันเดียวกัน</h3>
+        <p data-i="ext_p">เข้าไทยได้ 30 วันแล้ว เราดำเนินการต่ออายุอีก 30 วันให้ในวันเดินทางแบบ full service กลับกรุงเทพฯ พร้อมสิทธิ์พำนักรวม 60 วัน</p>
+        <ul class="list dot">
+          <li data-i="ext1">เป็นบริการเสริม มีค่าบริการเพิ่มเติม</li>
+          <li data-i="ext2">ต้องแจ้งล่วงหน้าก่อนวันเดินทาง</li>
+          <li data-i="ext3">ส่งหน้าพาสปอร์ตทุกหน้ามาให้ตรวจก่อน ว่าต่ออายุได้หรือไม่</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine" data-i="who_fine">การอนุญาตให้เข้าประเทศและการต่ออายุ เป็นดุลยพินิจของเจ้าหน้าที่ตรวจคนเข้าเมือง</p>
+  </div>
+</section>
+
+<section class="day">
+  <div class="wrap">
+    <div class="eyebrow" data-i="day_eb">ขั้นตอนในวันเดินทาง</div>
+    <h2 data-i="day_h">หนึ่งวันของคุณ ตั้งแต่ลงเครื่องจนกลับขึ้นเครื่อง</h2>
+    <p class="lede" data-i="day_p">คุณแค่มาให้ถึงเชียงราย ที่เหลือพนักงานพาไปทีละขั้น</p>
+    <ol class="steps">
+      <li class="step">
+        <span class="num">1</span>
+        <div><span class="time" data-i="s1_t">เช้า</span>
+          <h3 data-i="s1_h">ลงเครื่องที่สนามบินเชียงราย</h3>
+          <p data-i="s1_p">พนักงานรอรับที่ประตูผู้โดยสารขาเข้า เราส่งรายละเอียดจุดนัดพบให้ล่วงหน้า</p></div>
+        <div class="shots two"><img class="r45" src="img/n_gate.webp" alt="" data-alt="alt_airport" style="object-position:center 30%"><img class="r45" src="img/airport.webp" alt="" data-alt="alt_airport" style="object-position:20% center"></div>
+      </li>
+      <li class="step">
+        <span class="num">2</span>
+        <div><span class="time" data-i="s2_t">ตั้งแต่ 09:30</span>
+          <h3 data-i="s2_h">ขึ้นรถไปด่านเชียงแสน</h3>
+          <p data-i="s2_p">รถเริ่มรับตั้งแต่ไฟลต์แรก 09:30–10:00 น. เดินทางได้ทุกวัน ไม่มีวันหยุด</p></div>
+        <div class="shots"><img class="r43" src="img/n_car.webp" alt="" data-alt="alt_car"></div>
+      </li>
+      <li class="step">
+        <span class="num">3</span>
+        <div><h3 data-i="s3_h">ลงเรือข้ามแม่น้ำโขง</h3>
+          <p data-i="s3_p">พนักงานพาผ่านขั้นตอนขาออกที่ด่าน แล้วนั่งเรือข้ามไปฝั่งลาว</p></div>
+        <div class="shots two"><img class="r45" src="img/boarding.webp" alt="" data-alt="alt_boarding"><img class="r45" src="img/boat.webp" alt="" data-alt="alt_boat"></div>
+      </li>
+      <li class="step">
+        <span class="num">4</span>
+        <div><h3 data-i="s4_h">ถึงฝั่งลาว</h3>
+          <p data-i="s4_p">ทีมงานดำเนินเรื่องวีซ่าและเอกสารเข้าออกฝั่งลาวให้ คุณเดินตามพนักงานอย่างเดียว</p></div>
+        <div class="shots"><img class="r43" src="img/pier.webp" alt="" data-alt="alt_pier"></div>
+      </li>
+      <li class="step">
+        <span class="num">5</span>
+        <div><h3 data-i="s5_h">นั่งเรือกลับเข้าไทย รับตราประทับใหม่</h3>
+          <p data-i="s5_p">เราเตรียมไฟล์ TDAC สำหรับขากลับไว้ให้ แสดงต่อเจ้าหน้าที่เมื่อถูกขอ</p></div>
+        <div class="shots"><img class="r54" src="img/g1.webp" alt="" data-alt="alt_back" style="object-position:center 60%"></div>
+      </li>
+      <li class="step">
+        <span class="num">6</span>
+        <div><h3 data-i="s6_h">ส่งกลับสนามบินเชียงราย</h3>
+          <p data-i="s6_p">เสร็จจากด่านแล้วรถส่งกลับสนามบินทันที เราพยายามส่งให้ถึงเร็วที่สุด</p></div>
+        <div class="shots"><img class="r54" src="img/return.webp" alt="" data-alt="alt_return" style="object-position:center 52%"></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow" data-i="bk_eb">การจอง</div>
+    <h2 data-i="bk_h">จองง่าย 3 ขั้นตอน</h2>
+    <div class="book3">
+      <article><h3 data-i="b1_h">ส่งหน้าพาสปอร์ตและหน้าตราประทับทุกหน้า</h3><p data-i="b1_p">เราตรวจสอบให้ก่อน ยังไม่ต้องชำระเงิน</p></article>
+      <article><h3 data-i="b2_h">ตรวจผ่านแล้ว ชำระค่าบริการ</h3><p data-i="b2_p">เดินทางคนเดียว นอกช่วงเวลาบริการ โปรดสอบถามเฉพาะรายอีกครั้ง</p></article>
+      <article><h3 data-i="b3_h">จองตั๋วเครื่องบินไป–กลับ แล้วส่ง e-ticket ให้เรา</h3><p data-i="b3_p">หรือให้เราจองให้ คิดค่าตั๋วตามจริง และมีค่าบริการจอง</p></article>
+    </div>
+
+    <div class="two-col">
+      <div class="panel sun">
+        <h3 data-i="fl_h">เลือกเที่ยวบินอย่างไร</h3>
+        <ul class="list dot">
+          <li data-i="fl1">ขาไป เลือกไฟลต์ที่ลงเชียงรายหลัง 09:30 น.</li>
+          <li data-i="fl2">ขากลับ แนะนำจองช่วงเย็น หลัง 1 ทุ่ม (19:00 น.) เป็นต้นไป</li>
+          <li data-i="fl3">ช่วงปลายปีนักท่องเที่ยวและรถเยอะ และอาจมีเหตุล่าช้าหน้าด่าน จึงควรเผื่อเวลา เราจะส่งกลับสนามบินให้เร็วที่สุด</li>
+          <li data-i="fl5">เช้าจัด หรือรีบกลับช่วงบ่าย ถือเป็นนอกช่วงเวลา มีค่าบริการ VIP ด่วนเพิ่ม</li>
+          <li data-i="fl4">ตั๋วไป–กลับเชียงราย ประมาณ 3,000 กว่าบาท</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 data-i="in_h">ค่าบริการรวมอะไรบ้าง</h3>
+        <ul class="list">
+          <li data-i="in1">รถรับส่ง สนามบินเชียงราย – ด่านเชียงแสน ไปและกลับ</li>
+          <li data-i="in2">ค่าวีซ่าไทย–ลาว</li>
+          <li data-i="in3">พนักงานดูแลและดำเนินการตลอดเส้นทาง</li>
+        </ul>
+        <div class="sub-h" data-i="pre_h">เราเตรียมให้ก่อนเดินทาง</div>
+        <ul class="list">
+          <li data-i="pre1">ช่วยเช็กอินออนไลน์ ส่ง boarding pass ขาไปและขากลับให้ล่วงหน้า 24 ชั่วโมงได้</li>
+          <li data-i="pre2">จัดเตรียมเอกสารทั้งหมด</li>
+        </ul>
+        <div class="sub-h" data-i="ex_h">ไม่รวม</div>
+        <ul class="list x">
+          <li data-i="ex1">ค่าตั๋วเครื่องบิน และค่าบริการจองตั๋ว</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel" style="background:var(--coral-soft);margin-top:16px">
+      <h3 data-i="rule_h">ข้อควรรู้ที่ด่าน</h3>
+      <ul class="list x">
+        <li data-i="rule1">ห้ามถ่ายรูปหรือวิดีโอในบริเวณด่านตรวจคนเข้าเมือง</li>
+        <li data-i="rule2">งดใช้เสียงดัง และปฏิบัติตามคำแนะนำของเจ้าหน้าที่</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pro">
+  <div class="wrap">
+    <div class="eyebrow" data-i="pro_eb">ทำไมต้องเรา</div>
+    <h2 data-i="pro_h">ผู้เชี่ยวชาญตัวจริง ดูแลครบทุกขั้นตอน</h2>
+    <p class="lede" data-i="pro_p">เราทำ visa run เส้นทางเชียงแสนเป็นงานประจำ พาลูกค้าเดินทางจริงทุกวัน คุณไม่ต้องจัดการอะไรเองเลย</p>
+    <div class="pro4">
+      <article><h3 data-i="pro1_h">ตรวจพาสปอร์ตก่อนเดินทาง</h3><p data-i="pro1_p">เช็กทุกหน้าให้ก่อน รู้ผลก่อนจ่ายเงินและก่อนซื้อตั๋ว</p></article>
+      <article><h3 data-i="pro2_h">เตรียมเอกสารให้ทั้งหมด</h3><p data-i="pro2_p">เอกสารที่ต้องใช้ที่ด่าน เราจัดเตรียมไว้ให้ล่วงหน้า</p></article>
+      <article><h3 data-i="pro3_h">รับ–ส่งถึงสนามบิน</h3><p data-i="pro3_p">รถรอรับที่ประตูขาเข้า และส่งกลับถึงประตูขาออก</p></article>
+      <article><h3 data-i="pro4_h">พนักงานอยู่ด้วยตลอดทาง</h3><p data-i="pro4_p">พาเดินทุกจุด ทั้งฝั่งไทยและฝั่งลาว จนได้ตราประทับใหม่</p></article>
+    </div>
+    <div class="slogan">
+      <b lang="zh">诚信经营 · 用心服务</b>
+      <span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span>
+      <i lang="en">Integrity in Business, Care in Service</i>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow" data-i="gal_eb">ลูกค้าที่เดินทางกับเรา</div>
+    <h2 data-i="gal_h">ลูกค้าไว้วางใจ เดินทางจริงทุกวัน</h2>
+    <p class="lede" data-i="gal_p">ภาพจากทริปจริงของลูกค้าเรา ออกเดินทางได้ทุกวัน ไม่มีวันหยุด เบลอใบหน้าเพื่อความเป็นส่วนตัวของลูกค้า</p>
+    <div class="gal">
+      <img src="img/n_pier4.webp" alt="" data-alt="alt_g">
+      <img src="img/m_stairs.webp" alt="" data-alt="alt_g">
+      <img src="img/g2.webp" alt="" data-alt="alt_g">
+      <img src="img/m_big.webp" alt="" data-alt="alt_g">
+      <img src="img/n_hall.webp" alt="" data-alt="alt_g">
+      <img src="img/m_terrace.webp" alt="" data-alt="alt_g">
+      <img src="img/laos.webp" alt="" data-alt="alt_g">
+      <img src="img/m_car2.webp" alt="" data-alt="alt_g">
+      <img src="img/n_gate4.webp" alt="" data-alt="alt_g">
+      <img src="img/m_boat.webp" alt="" data-alt="alt_g">
+      <img src="img/n_pier6.webp" alt="" data-alt="alt_g">
+      <img src="img/m_dep4.webp" alt="" data-alt="alt_g">
+      <img src="img/g3.webp" alt="" data-alt="alt_g">
+      <img src="img/n_self2.webp" alt="" data-alt="alt_g">
+      <img src="img/m_walk.webp" alt="" data-alt="alt_g">
+      <img src="img/n_curb.webp" alt="" data-alt="alt_g">
+      <img src="img/n_boat.webp" alt="" data-alt="alt_g">
+      <img src="img/m_curb.webp" alt="" data-alt="alt_g">
+      <img src="img/n_pier8.webp" alt="" data-alt="alt_g">
+      <img src="img/m_car3.webp" alt="" data-alt="alt_g">
+      <img src="img/n_dep.webp" alt="" data-alt="alt_g">
+      <img src="img/n_self1.webp" alt="" data-alt="alt_g">
+      <img src="img/n_trio.webp" alt="" data-alt="alt_g">
+    </div>
+  </div>
+</section>
+
+<section class="final" id="book-now">
+  <div class="wrap">
+    <h2 data-i="fin_h">เดินทางได้ทุกวัน คนเดียวก็ออก ส่งพาสปอร์ตมาได้เลย</h2>
+    <p data-i="fin_p">ส่งหน้าพาสปอร์ต หน้าตราประทับทุกหน้า และวันที่ต้องการเดินทาง ให้ผู้ที่ส่งลิงก์นี้ให้คุณ เราจะตรวจสอบและแจ้งราคาให้</p>
+    <div class="msg" id="msg" data-i="msg">สนใจ Visa Run วันเดียว เชียงราย–เชียงแสน
+วันที่เดินทาง:
+จำนวนผู้เดินทาง:
+สัญชาติ:
+(แนบหน้าพาสปอร์ตและหน้าตราประทับทุกหน้า)</div>
+    <div class="cta-row">
+      <button class="btn" type="button" id="copy" data-i="copy">คัดลอกข้อความนี้</button>
+      <span class="copied" id="copied" role="status"></span>
+    </div>
+    <div class="slogan on-sky">
+      <b lang="zh">诚信经营 · 用心服务</b>
+      <span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span>
+      <i lang="en">Integrity in Business, Care in Service</i>
+    </div>
+    <div class="fbrand"><img src="img/logo.png" alt=""><div><b>ABC : Alliance Border Consulting</b><span data-i="fb">Visa Run วันเดียวจบ · เชียงราย – เชียงแสน</span></div></div>
+    <p class="foot" data-i="foot">ภาพเพื่อการโฆษณา รายละเอียดและค่าบริการโปรดสอบถามอีกครั้งตามวันที่เดินทางจากเจ้าหน้าที่ฝ่ายดูแลลูกค้าเท่านั้น</p>
+  </div>
+</section>
+</main>
+
+<div class="sticky"><button class="btn" type="button" data-go="book" data-i="cta">ส่งพาสปอร์ตมาตรวจสอบก่อน</button></div>
+
+<script>
+(function(){
+var T={
+zh:{
+fb:"一日往返 Visa Run · 清莱 – 清盛",hero_eb:"VISA RUN · 清莱 – 清盛",
+hero_h1:"一日往返 Visa Run<br><em>早去晚回</em>",
+hero_p:"从曼谷飞清莱，在清盛口岸乘船过湄公河，当天重新入境泰国并盖新入境章。从机场接机到送回机场，全程有工作人员陪同。",
+cta:"先发护照给我们审核",cta_note:"审核通过后再付款",
+f1:"清莱机场开始接机，首班航班 09:30–10:00，每天出发，全年无休",f2:"建议订 19:00 以后的返程航班，我们会尽快送您回机场",f3b:"30 天",f3:"中国护照当天获得 ผผ.30 免签入境",
+who_eb:"预订前",who_h:"哪些客户可以办理",
+who1_h:"中国护照",who1_t:"可直接办理",who1_p:"免签重新入境泰国，获得 ผผ.30，可停留 30 天，出行当天办完。",
+who2_h:"其他国籍",who2_t:"需先审核",who2_p:"请发送护照所有页面，我们审核后另行报价。",
+who3_h:"需另加服务费",who3_t:"请先咨询",x1:"有柬埔寨出入境记录",x2:"逾期停留（Overstay）",x3:"VIP 单人专车，或非常规时段出行",
+who_fine:"是否准许入境及延期，由移民局官员决定。",c1:"当天往返",c2:"落地起全程陪同办理",c3:"先审核护照",tag:"每天可出发，1人成团",c4:"无需等待拼团",c5:"全年无休",f4b:"60 天",f4:"可当天加办 30 天延期（增值服务）",ext_n:"合计可停留 60 天",ext_h:"当天再续 30 天，一次办完",ext_p:"入境泰国获得 30 天后，我们当天以全程代办方式为您再办 30 天延期，带着合计 60 天的停留期返回曼谷。",ext1:"属于增值服务，需另加服务费",ext2:"必须在出行前提前告知",ext3:"请先发送护照所有页面，由我们审核是否可以办理延期",
+day_eb:"出行当天流程",day_h:"您的一天：从落地到登机返程",day_p:"您只需要到达清莱，之后每一步都有工作人员带领。",
+s1_t:"上午",s1_h:"抵达清莱机场",s1_p:"工作人员在到达出口等候，集合地点会提前发给您。",
+s2_t:"09:30 起",s2_h:"乘车前往清盛口岸",s2_p:"从首班航班 09:30–10:00 开始接机发车，每天都可出行，全年无休。",
+s3_h:"乘船过湄公河",s3_p:"工作人员带您办理出境手续，然后乘船前往老挝一侧。",
+s4_h:"抵达老挝一侧",s4_p:"老挝一侧的签证和出入境手续由团队办理，您跟着工作人员走即可。",
+s5_h:"乘船返回泰国，盖新入境章",s5_p:"返回泰国所需的 TDAC 文件我们会提前准备好，官员要求时出示即可。",
+s6_h:"送回清莱机场",s6_p:"口岸手续办完后直接送回机场，我们会尽量让您早点到达。",
+bk_eb:"预订",bk_h:"预订只需 3 步",
+b1_h:"发送护照首页和所有盖章页",b1_p:"我们先审核，暂时不需要付款。",
+b2_h:"审核通过后支付服务费",b2_p:"单人出行或非服务时段出行，请另行单独咨询。",
+b3_h:"预订往返机票，并把电子机票发给我们",b3_p:"也可由我们代订：机票按实际价格收取，另收代订服务费。",
+fl_h:"如何选择航班",
+fl1:"去程：请选择 09:30 以后抵达清莱的航班",fl2:"返程：建议订傍晚 19:00 以后的航班",fl3:"年底游客和车辆较多，口岸也可能出现临时延误，请预留充足时间。我们会尽快送您回机场。",fl5:"过早抵达或下午赶早返程属于非常规时段，需加收 VIP 加急服务费。",fl4:"清莱往返机票约 3,000 泰铢以上",
+in_h:"服务费包含什么",in1:"清莱机场 – 清盛口岸往返接送",in2:"泰国–老挝签证费用",in3:"工作人员全程陪同并办理手续",
+pre_h:"出发前我们为您准备",pre1:"可协助在线值机，提前 24 小时发送往返登机牌",pre2:"准备全部所需文件",
+ex_h:"不包含",ex1:"机票费用及代订服务费",
+rule_h:"口岸注意事项",rule1:"移民检查区域内禁止拍照或录像",rule2:"请保持安静，并听从工作人员指示",
+pro_eb:"为什么选择我们",pro_h:"真正的专业团队，全程一站式服务",pro_p:"清盛线 Visa Run 是我们的日常业务，每天都带客户实际出行。您什么都不用自己操心。",pro1_h:"出行前先审核护照",pro1_p:"每一页都先帮您检查，付款和买机票之前就知道结果。",pro2_h:"所有文件我们准备",pro2_p:"口岸需要的文件，我们提前为您备好。",pro3_h:"机场接送到门口",pro3_p:"车辆在到达出口等候，结束后送到出发口。",pro4_h:"工作人员全程陪同",pro4_p:"泰国和老挝两侧每个环节都有人带，直到盖上新入境章。",gal_eb:"与我们同行的客户",gal_h:"客户信赖，每天都有人出发",gal_p:"以下均为我们客户的真实行程照片。每天都可出行，全年无休。为保护客户隐私，面部已做模糊处理。",
+fin_h:"每天可出发，1人成团。现在就把护照发给我们",
+fin_p:"请把护照首页、所有盖章页和计划出行日期，发给把这个链接发给您的联系人。我们审核后为您报价。",
+msg:"咨询清莱–清盛一日往返 Visa Run\n出行日期：\n人数：\n国籍：\n（附护照首页及所有盖章页）",
+copy:"复制这段信息",copied:"已复制，可直接粘贴到聊天中。",copyfail:"请长按上方文字手动复制。",
+foot:"图片仅供宣传。服务详情及费用，请按出行日期仅向客服人员再次确认。",
+alt_hero:"乘船驶向湄公河泰国一侧",alt_airport:"清莱机场到达出口",alt_car:"客户乘车前往清盛口岸",alt_boarding:"客户在清盛登船",alt_boat:"客户坐在渡船上",alt_pier:"客户在老挝一侧码头",alt_back:"客户乘船返回泰国",alt_return:"客户回到清莱机场",alt_g:"往期客户行程照片，面部已模糊",
+title:"清莱一日往返 Visa Run"
+},
+en:{
+fb:"One-day visa run · Chiang Rai – Chiang Saen",hero_eb:"VISA RUN · CHIANG RAI – CHIANG SAEN",
+hero_h1:"One-day visa run.<br><em>Out in the morning, back by evening.</em>",
+hero_p:"Fly from Bangkok to Chiang Rai, cross the Mekong at the Chiang Saen border, and re-enter Thailand with a new stamp the same day. Our staff stay with you from airport pickup to drop-off.",
+cta:"Send your passport for a check",cta_note:"Pay only after it passes",
+f1:"First pickups at Chiang Rai Airport, 09:30–10:00, every day with no days off",f2:"Book your return flight after 19:00. We get you back to the airport as early as we can",f3b:"30 days",f3:"Chinese passports get a ผผ.30 visa-exempt entry the same day",
+who_eb:"Before you book",who_h:"Who can use this service",
+who1_h:"Chinese passport",who1_t:"Accepted",who1_p:"Re-enter Thailand visa-free with a ผผ.30 stamp: 30 days of stay, finished on your travel day.",
+who2_h:"Other nationalities",who2_t:"Check first",who2_p:"Send every page of your passport. We check it and quote the service fee separately.",
+who3_h:"Extra fee applies",who3_t:"Ask first",x1:"Cambodia entry or exit history",x2:"Overstay",x3:"Private VIP service, or travel outside normal hours",
+who_fine:"Entry and extensions are always decided by the immigration officer.",c1:"Same-day round trip",c2:"Escorted from landing",c3:"Passport checked first",tag:"We go every day, even for one traveller",c4:"No waiting for a group",c5:"No days off",f4b:"60 days",f4:"Add a 30-day extension the same day (optional extra)",ext_n:"60 days of stay in total",ext_h:"Extend another 30 days, all on the same day",ext_p:"After you re-enter with 30 days, we handle a further 30-day extension for you that same day as a full service. You return to Bangkok with 60 days of stay in total.",ext1:"Optional extra with an additional fee",ext2:"Tell us in advance, before your travel date",ext3:"Send every passport page first so we can check whether you can extend",
+day_eb:"On the day",day_h:"Your day, from landing to the flight home",day_p:"You only need to get to Chiang Rai. Staff lead you through every step after that.",
+s1_t:"Morning",s1_h:"Land at Chiang Rai Airport",s1_p:"Our staff wait at the arrivals exit. We send you the meeting point in advance.",
+s2_t:"From 09:30",s2_h:"Drive to the Chiang Saen border",s2_p:"Pickups start with the first flights at 09:30–10:00. Trips run every day, with no days off.",
+s3_h:"Cross the Mekong by boat",s3_p:"Staff walk you through exit formalities at the checkpoint, then you ride the boat to the Lao side.",
+s4_h:"Arrive on the Lao side",s4_p:"Our team handles the Lao visa and the entry and exit paperwork. You simply follow the staff.",
+s5_h:"Boat back to Thailand, new entry stamp",s5_p:"We prepare your TDAC file for re-entry. Show it when the officer asks.",
+s6_h:"Straight back to Chiang Rai Airport",s6_p:"Once the border is done, the car takes you directly to the airport. We aim to get you there as early as possible.",
+bk_eb:"Booking",bk_h:"Book in 3 steps",
+b1_h:"Send your passport page and every stamped page",b1_p:"We review first. No payment yet.",
+b2_h:"Pay the service fee once approved",b2_p:"Travelling alone or outside service hours? Please ask us about your case.",
+b3_h:"Book round-trip flights and send us the e-tickets",b3_p:"Or we book for you: the actual fare plus a booking fee.",
+fl_h:"Choosing your flights",
+fl1:"Outbound: choose a flight that lands in Chiang Rai after 09:30",fl2:"Return: book an evening flight, 19:00 or later",fl3:"Year-end brings more tourists and traffic, and delays can happen at the border, so leave a buffer. We bring you back to the airport as early as we can.",fl5:"Very early arrivals or rushed afternoon returns count as off-hours and carry a VIP express fee.",fl4:"Round-trip airfare to Chiang Rai is roughly 3,000+ THB",
+in_h:"What the service fee covers",in1:"Car transfer, Chiang Rai Airport to Chiang Saen border and back",in2:"Thai–Lao visa fees",in3:"Staff who escort you and handle the process throughout",
+pre_h:"Prepared for you before travel",pre1:"Online check-in on request, with both boarding passes sent 24 hours ahead",pre2:"All required documents prepared",
+ex_h:"Not included",ex1:"Airfare and the ticket booking fee",
+rule_h:"At the checkpoint",rule1:"No photos or videos in immigration areas",rule2:"Keep your voice down and follow staff instructions",
+pro_eb:"Why us",pro_h:"Real specialists, full service from start to finish",pro_p:"The Chiang Saen visa run is our everyday work, and we take customers through it every day. You have nothing to arrange yourself.",pro1_h:"Passport checked before you travel",pro1_p:"We review every page first, so you know the result before paying or buying flights.",pro2_h:"All documents prepared",pro2_p:"Everything needed at the border is ready for you in advance.",pro3_h:"Airport pickup and drop-off",pro3_p:"The car waits at the arrivals exit and returns you to departures.",pro4_h:"Staff with you all the way",pro4_p:"We lead you through every point on the Thai and Lao sides until you have your new stamp.",gal_eb:"Customers who travelled with us",gal_h:"Trusted by real travellers, every day",gal_p:"These are photos from our customers' own trips. We run every day, with no days off. Faces are blurred to protect their privacy.",
+fin_h:"Every day, even for one traveller. Send us your passport",
+fin_p:"Send your passport page, every stamped page and your travel date to the person who shared this link. We check it and send you the price.",
+msg:"Enquiry: one-day visa run, Chiang Rai – Chiang Saen\nTravel date:\nNumber of travellers:\nNationality:\n(Passport page and all stamped pages attached)",
+copy:"Copy this message",copied:"Copied. Paste it into your chat.",copyfail:"Press and hold the text above to copy it.",
+foot:"Images are for promotional use. Please confirm service details and fees for your travel date with our customer service staff only.",
+alt_hero:"Boat heading to the Thai bank of the Mekong",alt_airport:"Arrivals exit at Chiang Rai Airport",alt_car:"Customers in the car to Chiang Saen",alt_boarding:"Customers boarding the boat at Chiang Saen",alt_boat:"Customers seated on the river boat",alt_pier:"Customers on the pier on the Lao side",alt_back:"Customers on the boat back to Thailand",alt_return:"Customers back at Chiang Rai Airport",alt_g:"Past customers on the trip, faces blurred",
+title:"One-Day Visa Run Chiang Rai"
+},
+th:{copied:"คัดลอกแล้ว วางในแชตได้เลย",copyfail:"กดค้างที่ข้อความด้านบนเพื่อคัดลอก",
+alt_hero:"นั่งเรือมุ่งหน้าฝั่งไทยของแม่น้ำโขง",alt_airport:"ประตูผู้โดยสารขาเข้า สนามบินเชียงราย",alt_car:"ลูกค้านั่งรถไปด่านเชียงแสน",alt_boarding:"ลูกค้าลงเรือที่เชียงแสน",alt_boat:"ลูกค้านั่งเรือข้ามแม่น้ำโขง",alt_pier:"ลูกค้าที่ท่าเรือฝั่งลาว",alt_back:"ลูกค้านั่งเรือกลับฝั่งไทย",alt_return:"ลูกค้ากลับถึงสนามบินเชียงราย",alt_g:"ภาพลูกค้าจากทริปที่ผ่านมา เบลอใบหน้าแล้ว",
+title:"Visa Run วันเดียวจบ เชียงราย"}
+};
+var nodes=document.querySelectorAll("[data-i]");
+nodes.forEach(function(n){var k=n.getAttribute("data-i");if(!(k in T.th))T.th[k]=n.innerHTML;});
+var cur="th";
+function apply(l){
+  if(!T[l])l="th";cur=l;
+  document.documentElement.lang=l;
+  nodes.forEach(function(n){var k=n.getAttribute("data-i");var v=T[l][k];if(v==null)v=T.th[k];
+    if(k==="msg")n.textContent=v.replace(/\\n/g,"\n");else n.innerHTML=v;});
+  document.querySelectorAll("[data-alt]").forEach(function(n){n.alt=T[l][n.getAttribute("data-alt")]||"";});
+  document.querySelectorAll("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false");});
+  document.title=T[l].title;
+  document.getElementById("copied").textContent="";
+}
+function pick(){
+  var h=(location.hash||"").replace("#","");
+  if(T[h])return h;
+  try{var s=localStorage.getItem("vr_lang");if(T[s])return s;}catch(e){}
+  var n=(navigator.language||"th").toLowerCase();
+  return n.indexOf("zh")===0?"zh":n.indexOf("th")===0?"th":"en";
+}
+document.querySelectorAll("[data-lang]").forEach(function(b){b.addEventListener("click",function(){
+  var l=b.getAttribute("data-lang");apply(l);
+  try{localStorage.setItem("vr_lang",l);}catch(e){}
+  try{history.replaceState(null,"","#"+l);}catch(e){location.hash=l;}
+});});
+window.addEventListener("hashchange",function(){var h=location.hash.replace("#","");if(T[h])apply(h);});
+document.querySelectorAll("[data-go]").forEach(function(b){b.addEventListener("click",function(){
+  document.getElementById("book-now").scrollIntoView({behavior:"smooth",block:"start"});});});
+document.getElementById("copy").addEventListener("click",function(){
+  var out=document.getElementById("copied"),txt=document.getElementById("msg").textContent;
+  function ok(){out.textContent=T[cur].copied;}
+  function fail(){out.textContent=T[cur].copyfail;}
+  try{navigator.clipboard.writeText(txt).then(ok,fail);}catch(e){fail();}
+});
+apply(pick());
+})();
+</script>
+</body>
+</html>
