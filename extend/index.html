@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ต่ออายุวีซ่าไทย 30 วัน ที่ IT Square กรุงเทพฯ · 泰国签证延期 30 天 · ABC : Alliance Border Consulting">
+<meta property="og:title" content="续签 30 天 · ต่ออายุวีซ่า 30 วัน · 30-Day Visa Extension">
+<meta property="og:image" content="img/kcounter.webp">
+<link rel="icon" href="img/logo.png">
+<title>ต่ออายุวีซ่า 30 วัน</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: one bright river-day story. Sky-blue hero, a single vertical timeline rail
+   that carries the traveller from landing to take-off, sunny yellow for every action. */
+:root{
+  color-scheme: light;
+  --sky:#1a8cff;        /* Mekong-day sky, main brand colour */
+  --sky-soft:#e3f2ff;   /* pastel sky for panels */
+  --sun:#ffcf3f;        /* action colour: buttons, time chips */
+  --sun-soft:#fff5cf;
+  --mint:#d5f5e6;       /* "included / ok" */
+  --mint-ink:#0b7a52;
+  --coral:#ff6b5e;      /* warnings only */
+  --coral-soft:#ffe6e2;
+  --ink:#14315c;        /* text */
+  --ink-2:#4c6485;      /* secondary text */
+  --paper:#f6fbff;      /* page background */
+  --card:#ffffff;
+  --line:#cfe4f8;
+  --font-display:"Prompt","Noto Sans SC","Noto Sans Thai",system-ui,sans-serif;
+  --font-body:"Sarabun","Noto Sans SC","Noto Sans Thai",system-ui,sans-serif;
+  --r:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%}
+html[lang="zh"] body{--font-display:"Noto Sans SC","Prompt",system-ui,sans-serif;--font-body:"Noto Sans SC","Sarabun",system-ui,sans-serif;line-height:1.75}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--font-display);line-height:1.25;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.eyebrow{font-family:var(--font-display);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--sky)}
+h2{font-size:clamp(26px,4.4vw,36px);font-weight:700;margin-top:6px}
+.lede{color:var(--ink-2);max-width:60ch;margin-top:10px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:16px;white-space:nowrap}
+.brand img{height:40px;width:auto;flex:none}
+.bn{display:grid;line-height:1.15}
+.bn b{font-size:17px;letter-spacing:.04em}
+.bn small{font:500 11.5px var(--font-display);color:var(--ink-2);white-space:nowrap}
+.lang{display:flex;background:var(--sky-soft);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;font:600 14px var(--font-display);color:var(--ink-2);padding:6px 12px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--sky);color:#fff}
+
+/* hero */
+.hero{padding:28px 0 40px;background:linear-gradient(180deg,#dff0ff 0%,var(--paper) 100%)}
+.hero .wrap{display:grid;gap:28px;align-items:center}
+.hero h1{font-size:clamp(34px,8vw,58px);font-weight:700;margin:10px 0 14px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero p.sub{font-size:18px;color:var(--ink-2);max-width:52ch}
+.tagline{display:inline-block;background:var(--sun);font:700 clamp(19px,4.6vw,26px)/1.3 var(--font-display);padding:8px 18px;border-radius:14px;margin:0 0 16px;transform:rotate(-1.5deg)}
+.chips{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{background:#fff;border:1.5px solid var(--sky);color:var(--sky);font:600 14px var(--font-display);padding:5px 12px;border-radius:999px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--sun);color:var(--ink);font:700 17px var(--font-display);padding:14px 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;box-shadow:0 6px 0 #e3ac10;transition:transform .12s, box-shadow .12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #e3ac10}
+.btn:active{transform:translateY(6px);box-shadow:0 0 0 #e3ac10}
+.cta-note{font-size:15px;color:var(--ink-2)}
+.hero-photo{position:relative;max-width:440px;width:100%;justify-self:center}
+.hero-photo::before{content:"";position:absolute;inset:18px -14px -14px 18px;background:var(--sun);border-radius:36px;z-index:0}
+.hero-photo img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:32px;border:5px solid #fff}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:8px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.fact b{display:block;font:700 28px/1.1 var(--font-display);color:var(--sky);font-variant-numeric:tabular-nums}
+.fact span{display:block;margin-top:6px;font-size:15px;color:var(--ink-2);line-height:1.45}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:24px}
+.who article{border-radius:var(--r);padding:20px;background:var(--card);border:1px solid var(--line)}
+.who article.ok{background:var(--mint);border-color:transparent}
+.who article.extra{background:var(--sun-soft);border-color:transparent}
+.who h3{font-size:19px;font-weight:600;display:flex;align-items:center;gap:8px}
+.who p{margin-top:8px;font-size:16px}
+.tag{font:600 12px var(--font-display);padding:3px 10px;border-radius:999px;background:#fff}
+.ok .tag{color:var(--mint-ink)} .extra .tag{color:#8a5a00}
+.ext{display:grid;gap:18px;align-items:center;margin-top:14px;background:var(--sky);color:#fff;border-radius:var(--r);padding:22px}
+.ext-n{background:var(--sun);color:var(--ink);border-radius:16px;padding:14px 18px;text-align:center;justify-self:start}
+.ext-n b{display:block;font:700 30px/1.1 var(--font-display);white-space:nowrap}
+.ext-n span{font:600 14px var(--font-display)}
+.ext h3{font-size:21px;font-weight:600;color:#fff}
+.ext p{margin:8px 0 12px;color:#eaf5ff;font-size:16px}
+.ext .list li{color:#fff}
+@media (min-width:700px){.ext{grid-template-columns:auto 1fr;gap:26px;padding:26px}}
+.fine{font-size:14px;color:var(--ink-2);margin-top:14px}
+
+/* timeline */
+.day{background:#fff;border-block:1px solid var(--line)}
+.steps{list-style:none;margin:32px 0 0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:4px;border-radius:4px;background:repeating-linear-gradient(180deg,var(--sky) 0 10px,transparent 10px 18px)}
+.step{position:relative;padding:0 0 40px 58px;display:grid;gap:16px}
+.step:last-child{padding-bottom:0}
+.num{position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--sky);color:#fff;font:700 18px/42px var(--font-display);text-align:center;border:4px solid #fff;box-shadow:0 0 0 2px var(--sky)}
+.time{display:inline-block;font:600 14px var(--font-display);background:var(--sun);padding:3px 12px;border-radius:999px;margin-bottom:8px;font-variant-numeric:tabular-nums}
+.step h3{font-size:22px;font-weight:600}
+.step p{color:var(--ink-2);margin-top:6px;max-width:52ch}
+.shots{display:grid;gap:10px;grid-template-columns:1fr}
+.shots.two{grid-template-columns:1fr 1fr}
+.shots img{width:100%;object-fit:cover;border-radius:18px;background:var(--sky-soft)}
+.r45{aspect-ratio:4/5}.r54{aspect-ratio:5/4}.r43{aspect-ratio:4/3}
+
+/* booking */
+.book3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:26px;counter-reset:b}
+.book3 article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px;counter-increment:b}
+.book3 article::before{content:counter(b);display:block;font:700 40px/1 var(--font-display);color:var(--sun);-webkit-text-stroke:1.5px var(--ink);margin-bottom:12px}
+.book3 h3{font-size:18px;font-weight:600}
+.book3 p{font-size:16px;color:var(--ink-2);margin-top:8px}
+
+.two-col{display:grid;gap:16px;margin-top:26px}
+.panel{background:var(--sky-soft);border-radius:var(--r);padding:22px}
+.panel.sun{background:var(--sun-soft)}
+.panel h3{font-size:19px;font-weight:600;margin-bottom:10px}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.list li{position:relative;padding-left:28px;font-size:16px;line-height:1.5}
+.list li::before{content:"";position:absolute;left:0;top:.28em;width:18px;height:18px;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.6L13 6.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px}
+.list.x li::before{background:var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M6 6l6 6M12 6l-6 6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/18px}
+.list.dot li::before{background:var(--sun);border:2px solid var(--ink);width:10px;height:10px;top:.5em;left:4px}
+.sub-h{font:600 14px var(--font-display);color:var(--ink-2);margin:18px 0 8px}
+
+.pro{background:var(--sky-soft)}
+.pro4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:26px}
+.pro4 article{background:var(--card);border-radius:var(--r);padding:20px;border-top:6px solid var(--sun)}
+.pro4 h3{font-size:18px;font-weight:600}
+.pro4 p{font-size:16px;color:var(--ink-2);margin-top:8px}
+.pro + section{padding-top:56px !important}
+.slogan{margin-top:28px;display:grid;gap:4px;justify-items:center;text-align:center;background:var(--card);border-radius:var(--r);padding:20px 16px;border:2px dashed var(--sky)}
+.slogan b{font:700 clamp(22px,5.4vw,30px)/1.3 "Noto Sans SC",var(--font-display);color:var(--sky);letter-spacing:.06em}
+.slogan span{font:600 clamp(17px,4.2vw,21px)/1.4 "Prompt",var(--font-display);color:var(--ink)}
+.slogan i{font:500 15px/1.4 "Prompt",var(--font-display);color:var(--ink-2)}
+.slogan.on-sky{background:transparent;border-color:rgba(255,255,255,.6);margin-top:34px;max-width:480px}
+.slogan.on-sky b{color:var(--sun)} .slogan.on-sky span{color:#fff} .slogan.on-sky i{color:#d6ebff}
+.fbrand{display:flex;align-items:center;gap:14px;margin-top:26px}
+.fbrand img{height:64px;width:auto;background:#fff;border-radius:14px;padding:8px 10px}
+.fbrand b{display:block;font:700 18px/1.3 var(--font-display);color:#fff}
+.fbrand span{font-size:14px;color:#d6ebff}
+.final .fbrand + .foot{margin-top:14px}
+/* gallery */
+.gal{columns:2;column-gap:10px;margin-top:24px}
+.gal img{width:100%;height:auto;border-radius:16px;margin:0 0 10px;break-inside:avoid;background:var(--sky-soft)}
+@media (min-width:620px){.gal{columns:3}}
+@media (min-width:960px){.gal{columns:4}}
+
+/* final */
+.final{background:var(--sky);color:#fff;border-radius:32px 32px 0 0;padding:56px 0 110px}
+.final h2{color:#fff}
+.final p{max-width:58ch;margin-top:12px;color:#eaf5ff}
+.msg{background:#fff;color:var(--ink);border-radius:16px;padding:16px 18px;margin-top:22px;white-space:pre-wrap;font-size:16px;line-height:1.7;max-width:480px;user-select:all}
+.final .cta-row{margin-top:18px}
+.copied{font-weight:700;min-height:1.6em}
+.foot{font-size:13px;color:#d6ebff;margin-top:34px;max-width:70ch}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.95);border-top:1px solid var(--line);display:flex;justify-content:center}
+.sticky .btn{width:100%;max-width:440px;justify-content:center;padding:12px 20px;box-shadow:0 4px 0 #e3ac10}
+
+@media (min-width:820px){
+  section{padding:76px 0}
+  .hero{padding:48px 0 56px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:48px}
+  .facts{grid-column:1/-1}
+  .step{grid-template-columns:1fr 1fr;gap:32px;padding-bottom:56px;align-items:start}
+  .step .shots:empty{display:none}
+  .two-col{grid-template-columns:1fr 1fr}
+  .sticky{display:none}
+  .final{padding-bottom:64px}
+}
+@media (max-width:420px){
+  .bn small{font-size:10.5px}.brand img{height:34px}
+  .lang button{padding:6px 9px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+.hero-photo{max-width:520px}
+.hero-photo img{aspect-ratio:4/3;object-position:center}
+.loc{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:24px}
+.loc article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.loc article.main{background:var(--sky);border-color:transparent;color:#fff;grid-column:1/-1}
+.loc h3{font-size:20px;font-weight:600}
+.loc p{font-size:15px;margin-top:6px;color:var(--ink-2)}
+.loc .main p{color:#eaf5ff}
+.loc .main h3{font-size:24px}
+.route{counter-reset:r;list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.route li{counter-increment:r;position:relative;padding-left:34px;font-size:16px;line-height:1.5}
+.route li::before{content:counter(r);position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--sun);font:700 13px/24px var(--font-display);text-align:center}
+.linkbtn{display:inline-block;margin-top:14px;font:600 16px var(--font-display);color:var(--sky);background:#fff;border:2px solid var(--sky);border-radius:999px;padding:9px 18px;text-decoration:none}
+.locwrap{display:grid;gap:20px;margin-top:24px;align-items:center}
+.locwrap .loc{margin-top:0}
+.poster{position:relative;max-width:420px;width:100%;justify-self:center}
+.poster::before{content:"";position:absolute;inset:14px -12px -12px 14px;background:var(--sun);border-radius:26px}
+.poster img{position:relative;width:100%;border-radius:22px;border:5px solid #fff;box-shadow:0 10px 30px rgba(20,49,92,.18)}
+.loc article{border-left:6px solid var(--sun)}
+.loc article.main{border-left:0;box-shadow:0 8px 0 #0b6fd6}
+@media (min-width:820px){.locwrap{grid-template-columns:.8fr 1.2fr;gap:44px}}
+.staff{margin:0;position:relative;border-radius:22px;overflow:hidden;border:5px solid #fff;box-shadow:0 10px 30px rgba(20,49,92,.18);outline:3px solid var(--sun)}
+.staff img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.staff figcaption{position:absolute;left:12px;bottom:12px;background:var(--sun);border-radius:14px;padding:8px 14px;display:grid}
+.staff b{font:700 18px/1.3 var(--font-display)}
+.staff span{font:500 14px/1.4 var(--font-display)}
+.shots img{box-shadow:0 6px 18px rgba(20,49,92,.12)}
+.step h3{color:var(--ink)}
+.day{background:linear-gradient(180deg,#fff 0%,#f3f9ff 100%)}
+.stamps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+.stamps img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;border:4px solid #fff;box-shadow:0 8px 22px rgba(20,49,92,.16)}
+@media (min-width:820px){.stamps{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.times{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:24px}
+.times article{border-radius:var(--r);padding:18px 20px}
+.times b{display:block;font:700 30px/1.1 var(--font-display);font-variant-numeric:tabular-nums}
+.times h3{font-size:17px;font-weight:600;margin-top:8px}
+.times p{font-size:15px;margin-top:4px}
+.t-ok{background:var(--mint)} .t-ok b{color:var(--mint-ink)}
+.t-slow{background:var(--coral-soft)} .t-slow b{color:#c23a2e}
+.t-vip{background:var(--sun-soft)} .t-vip b{color:#8a5a00}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="brand"><img src="img/logo.png" alt="ABC"><span class="bn"><b>ABC</b><small>Alliance Border Consulting</small></span></div>
+<div class="lang" role="group" aria-label="Language">
+<button type="button" data-lang="zh" aria-pressed="false">中文</button><button type="button" data-lang="en" aria-pressed="false">EN</button><button type="button" data-lang="th" aria-pressed="true">ไทย</button>
+</div></div></header>
+<main>
+<section class="hero"><div class="wrap">
+<div>
+<div class="eyebrow" data-i="hero_eb">ต่ออายุวีซ่าไทย · IT SQUARE กรุงเทพฯ</div>
+<h1 data-i="hero_h1">ต่ออายุ 30 วัน<br><em>เสร็จในวัน รับเล่มกลับบ้าน</em></h1>
+<p class="tagline" data-i="tag">ส่งพาสปอร์ตให้เรา ที่เหลือเราจัดการ</p>
+<p class="sub" data-i="hero_p">มาที่จุดนัดพบ ชั้น 3 IT Square หลักสี่ แล้วส่งพาสปอร์ตให้พนักงานของเรา เราเตรียมเอกสารและยื่นเรื่องให้ คุณแค่เข้าพบเจ้าหน้าที่เพื่อยืนยันตัวตน แล้วรอรับพาสปอร์ต</p>
+<ul class="chips"><li data-i="c1">จันทร์–ศุกร์</li><li data-i="c2">เริ่ม 08:30 น.</li><li data-i="c3">เตรียมเอกสารให้ทั้งหมด</li><li data-i="c4">มีพนักงานดูแล</li><li data-i="c5">มี VIP fast lane</li></ul>
+<div class="cta-row"><button class="btn" type="button" data-go="steps" data-i="cta">ดูจุดนัดพบและขั้นตอน</button><span class="cta-note" data-i="cta_note">ต้องจองล่วงหน้า</span></div>
+</div>
+<div class="hero-photo"><img src="img/kcounter.webp" alt="" data-alt="alt_hero"></div>
+<div class="facts">
+<div class="fact"><b>08:30</b><span data-i="f1">เริ่มให้บริการ ทุกวันทำการ จันทร์–ศุกร์</span></div>
+<div class="fact"><b>08:30–10:00</b><span data-i="f2">ช่วงเวลาแนะนำ คนน้อย เสร็จเร็ว</span></div>
+<div class="fact"><b data-i="f3b">30 วัน</b><span data-i="f3">ต่อจากวันอนุญาตเดิมอีก 30 วัน</span></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow" data-i="loc_eb">พื้นที่ให้บริการ</div>
+<h2 data-i="loc_h">ให้บริการหลายด่าน เน้นกรุงเทพฯ เป็นหลัก</h2>
+<div class="locwrap"><div class="poster"><img src="img/poster.webp" alt="" data-alt="alt_poster"></div>
+<div class="loc">
+<article class="main"><h3 data-i="l1_h">กรุงเทพฯ · IT Square หลักสี่ ชั้น 3</h3><p data-i="l1_p">ตม. Immigration Division 1 · K Counter จุดบริการหลักของเรา มีพนักงานประจำทุกวันทำการ</p></article>
+<article><h3 data-i="l2_h">นนทบุรี</h3><p data-i="l_p">ต้องจองล่วงหน้า สอบถามพนักงานก่อน</p></article>
+<article><h3 data-i="l3_h">ระยอง</h3><p data-i="l_p">ต้องจองล่วงหน้า สอบถามพนักงานก่อน</p></article>
+<article><h3 data-i="l4_h">พัทยา</h3><p data-i="l_p">ต้องจองล่วงหน้า สอบถามพนักงานก่อน</p></article>
+</div></div>
+</div></section>
+
+<section class="day" id="steps"><div class="wrap">
+<div class="eyebrow" data-i="day_eb">ขั้นตอน</div>
+<h2 data-i="day_h">มาถึงแล้ว ทำแค่ 4 ขั้นตอน</h2>
+<p class="lede" data-i="day_p">ไม่ต้องกรอกฟอร์มเอง ไม่ต้องต่อคิวยื่นเอง</p>
+<ol class="steps">
+<li class="step"><span class="num">1</span><div><span class="time" data-i="s1_t">ตั้งแต่ 08:30</span><h3 data-i="s1_h">มาที่จุดนัดพบสีชมพู ชั้น 3</h3><p data-i="s1_p">จุดนัดพบอยู่หน้าสำนักงานจัดหางาน (ป้ายสีชมพู) ชั้น 3 มองหาพนักงานของเราตามภาพ แล้วแจ้งชื่อของคุณ</p></div>
+<figure class="staff"><img src="img/staff.webp" alt="" data-alt="alt_staff"><figcaption><b data-i="st_b">พนักงานของเรา</b><span data-i="st_s">มองหาคนนี้ที่จุดนัดพบสีชมพู</span></figcaption></figure></li>
+<li class="step"><span class="num">2</span><div><h3 data-i="s2_h">ส่งมอบพาสปอร์ตให้พนักงาน</h3><p data-i="s2_p">พนักงานจัดเตรียมเอกสารทั้งหมด (แบบ ตม.7 และอื่น ๆ) และยื่นขอต่ออายุให้คุณ</p></div>
+<div class="shots two"><img class="r45" src="img/passports.webp" alt="" data-alt="alt_pass"><img class="r45" src="img/tm7.webp" alt="" data-alt="alt_tm7"></div></li>
+<li class="step"><span class="num">3</span><div><h3 data-i="s3_h">รอคิว แล้วเข้าพบเจ้าหน้าที่ยืนยันตัวตน</h3><p data-i="s3_p">เมื่อถึงคิว พนักงานพาไปที่ K Counter เจ้าหน้าที่ ตม. จะยืนยันตัวตนของคุณต่อหน้า</p></div>
+<div class="shots"><img class="r54" src="img/kcounter.webp" alt="" data-alt="alt_hero"></div></li>
+<li class="step"><span class="num">4</span><div><h3 data-i="s4_h">รับพาสปอร์ต กลับบ้านได้เลย</h3><p data-i="s4_p">เมื่อประทับตราต่ออายุเรียบร้อย เราส่งพาสปอร์ตคืนให้คุณ</p></div>
+<div class="shots"><img class="r54" src="img/stamp.webp" alt="" data-alt="alt_stamp" style="object-position:center 30%"></div></li>
+</ol>
+</div></section>
+
+<section><div class="wrap">
+<div class="two-col" style="margin-top:0">
+<div class="panel sun">
+<h3 data-i="rt_h">ตอนเช้าขึ้นชั้น 3 อย่างไร</h3>
+<p data-i="rt_p" style="margin-bottom:12px">ช่วงเช้าประตูหลักของห้างยังไม่เปิด ให้ใช้เส้นทางนี้</p>
+<ol class="route"><li data-i="r1">ไปที่หน้าธนาคารกรุงเทพ (Bangkok Bank Express) เดินตรงไปตามลูกศร</li><li data-i="r2">ลงบันไดเลื่อน</li><li data-i="r3">ลงมาแล้วเลี้ยวขวา เข้าลานจอดรถ</li><li data-i="r4">เดินตรงไปจนถึงทางเข้าลิฟต์ T2</li><li data-i="r5">กดลิฟต์ขึ้นชั้น 3</li><li data-i="r6">ออกจากลิฟต์ เลี้ยวขวา เดินตรงไปถึงจุดนัดพบสีชมพู</li></ol>
+<a class="linkbtn" href="https://toey99.github.io/it-square-guide/" target="_blank" rel="noopener" data-i="rt_btn">เปิดคู่มือการเดินทางพร้อมรูป</a>
+<p class="fine" data-i="rt_note">เมื่อประตูหลักเปิดแล้ว ขึ้นชั้น 3 ทางประตูหลักได้เลย</p>
+</div>
+<div>
+<div class="panel"><h3 data-i="in_h">เราทำอะไรให้คุณ</h3><ul class="list"><li data-i="in1">จัดเตรียมเอกสารคำขอทั้งหมด</li><li data-i="in2">ยื่นขอต่ออายุแทนคุณ</li><li data-i="in3">มีพนักงานอยู่ช่วยตลอดขั้นตอน</li></ul></div>
+<div class="panel sun" style="margin-top:16px;background:var(--mint)"><h3 data-i="br_h">สิ่งที่คุณต้องเตรียม</h3><ul class="list dot"><li data-i="b1">พาสปอร์ตเล่มจริง</li><li data-i="b2">ต้องมาด้วยตัวเอง (เจ้าหน้าที่ต้องยืนยันตัวตนต่อหน้า)</li><li data-i="b3">ข้อกำหนดอื่น โปรดสอบถามพนักงานตอนจอง</li></ul></div>
+</div>
+</div>
+</div></section>
+
+<section class="pro"><div class="wrap">
+<div class="eyebrow" data-i="tm_eb">เวลาแนะนำ</div>
+<h2 data-i="tm_h">มาเช้า เสร็จเร็ว</h2>
+<div class="times">
+<article class="t-ok"><b>08:30–10:00</b><h3 data-i="t1_h">ช่วงเวลาแนะนำ</h3><p data-i="t1_p">คนน้อย รอไม่นาน</p></article>
+<article class="t-slow"><b data-i="t2b">หลัง 10:00</b><h3 data-i="t2_h">ใช้เวลาค่อนข้างนาน</h3><p data-i="t2_p">คิวยาวขึ้นมากในช่วงสาย</p></article>
+<article class="t-vip"><b>VIP</b><h3 data-i="t3_h">อยากเร็วกว่านี้?</h3><p data-i="t3_p">แนะนำ VIP fast lane โปรดสอบถามพนักงานเพิ่มเติม</p></article>
+</div>
+<div class="slogan"><b lang="zh">诚信经营 · 用心服务</b><span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span><i lang="en">Integrity in Business, Care in Service</i></div>
+</div></section>
+
+<section style="padding-bottom:0"><div class="wrap">
+<div class="eyebrow" data-i="res_eb">ผลงานจริง</div>
+<h2 data-i="res_h">ตราต่ออายุ 30 วัน ในเล่มลูกค้าของเรา</h2>
+<p class="lede" data-i="res_p">ตัวอย่างตราต่ออายุที่ลูกค้าได้รับกลับไปในวันเดียว ปิดเลขคำขอและลายเซ็นเพื่อความเป็นส่วนตัว</p>
+<div class="stamps"><img src="img/st1.webp" alt="" data-alt="alt_stamp"><img src="img/st2.webp" alt="" data-alt="alt_stamp"><img src="img/st3.webp" alt="" data-alt="alt_stamp"><img src="img/st4.webp" alt="" data-alt="alt_stamp"><img src="img/st5.webp" alt="" data-alt="alt_stamp"><img src="img/st6.webp" alt="" data-alt="alt_stamp"><img src="img/st7.webp" alt="" data-alt="alt_stamp"></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow" data-i="gal_eb">ภาพหน้างาน</div>
+<h2 data-i="gal_h">เราอยู่ที่นี่ทุกวันทำการ</h2>
+<p class="lede" data-i="gal_p">ลูกค้าที่จุดนัดพบและบรรยากาศหน้างานจริง เบลอใบหน้าและข้อมูลเอกสารเพื่อความเป็นส่วนตัว</p>
+<div class="gal" style="columns:2"><img src="img/office3.webp" alt="" data-alt="alt_g"><img src="img/office2.webp" alt="" data-alt="alt_g"><img src="img/tm7.webp" alt="" data-alt="alt_tm7"><img src="img/passports.webp" alt="" data-alt="alt_pass"></div>
+</div></section>
+
+<section class="final" id="book-now"><div class="wrap">
+<h2 data-i="fin_h">จองคิวต่ออายุ ส่งข้อความนี้มาได้เลย</h2>
+<p data-i="fin_p">ส่งรายละเอียดด้านล่างให้ผู้ที่ส่งลิงก์นี้ให้คุณ เราจะนัดวันให้</p>
+<div class="msg" id="msg" data-i="msg">จองต่ออายุวีซ่า 30 วัน
+สถานที่: IT Square กรุงเทพฯ
+วันที่:
+จำนวนคน:
+(แนบหน้าพาสปอร์ตและตราเข้าล่าสุด)</div>
+<div class="cta-row"><button class="btn" type="button" id="copy" data-i="copy">คัดลอกข้อความนี้</button><span class="copied" id="copied" role="status"></span></div>
+<div class="slogan on-sky"><b lang="zh">诚信经营 · 用心服务</b><span lang="th">ซื่อสัตย์ จริงใจ ใส่ใจบริการ</span><i lang="en">Integrity in Business, Care in Service</i></div>
+<div class="fbrand"><img src="img/logo.png" alt=""><div><b>ABC : Alliance Border Consulting</b><span data-i="fb">ต่ออายุวีซ่า 30 วัน · IT Square หลักสี่ กรุงเทพฯ</span></div></div>
+<p class="foot"><span data-i="who_fine">การอนุญาตให้ต่ออายุเป็นดุลยพินิจของเจ้าหน้าที่ตรวจคนเข้าเมือง</span> <span data-i="foot">ภาพเพื่อการโฆษณา รายละเอียดและค่าบริการโปรดสอบถามจากเจ้าหน้าที่ฝ่ายดูแลลูกค้าเท่านั้น</span></p>
+</div></section>
+</main>
+<div class="sticky"><button class="btn" type="button" data-go="book" data-i="cta2">จองคิวต่ออายุ</button></div>
+<script>
+(function(){
+var T={zh:{hero_eb:"泰国签证延期 · 曼谷 IT Square",hero_h1:"续签 30 天<br><em>当天办完，拿护照回家</em>",tag:"护照交给我们，其余我们办",hero_p:"到 IT Square Laksi 三楼集合点，把护照交给我们的工作人员。文件准备和递交都由我们完成，您只需要到柜台确认本人身份，然后等护照。",c1:"周一至周五",c2:"08:30 开始",c3:"文件全部代办",c4:"专人陪同",c5:"可选 VIP 快速通道",cta:"查看集合点和流程",cta_note:"需提前预约",f1:"周一至周五，每个工作日开始服务",f2:"建议到达时段，人少办得快",f3b:"30 天",f3:"在原停留期基础上再延长 30 天",loc_eb:"服务地区",loc_h:"多个移民局都可以办，曼谷为主",l1_h:"曼谷 · IT Square Laksi 三楼",l1_p:"移民局 Immigration Division 1 · K Counter。我们每个工作日都在这里，这是主要服务点。",l2_h:"暖武里府",l3_h:"罗勇府",l4_h:"芭提雅",l_p:"需提前预约，请先咨询工作人员。",day_eb:"办理流程",day_h:"到了以后，只要这 4 步",day_p:"您不用填表，也不用自己排队递件。",s1_t:"08:30 起",s1_h:"到三楼粉色集合点",s1_p:"集合点在三楼粉色的劳工局办公室门口。按照片找到我们的工作人员，报上您的名字。",s2_h:"把护照交给工作人员",s2_p:"工作人员为您准备好全部文件（TM.7 申请表等），并替您递交延期申请。",s3_h:"等候叫号，见官员确认身份",s3_p:"轮到您时，工作人员带您到 K Counter，由移民局官员当面确认本人。",s4_h:"领回护照，可以回家了",s4_p:"延期章盖好后，我们把护照交还给您。",rt_h:"早上怎么上三楼",rt_p:"早上商场正门还没开，请走下面这条路线：",r1:"到曼谷银行（Bangkok Bank Express）门口，按箭头直走",r2:"乘自动扶梯下楼",r3:"下楼后右转，进入停车场",r4:"直走到 T2 电梯入口",r5:"乘电梯到 3 楼",r6:"出电梯右转直走，就是粉色集合点",rt_btn:"打开带照片的路线指南",rt_note:"商场正门开放后，可直接从正门上三楼。",tm_eb:"时间建议",tm_h:"越早到，越快办完",t1_h:"建议时段",t1_p:"人少，等候时间短。",t2b:"10:00 以后",t2_h:"等候时间较长",t2_p:"排队人数多，办理会比较久。",t3_h:"想更快？",t3_p:"可选 VIP 快速通道，请向工作人员咨询。",in_h:"我们为您做什么",in1:"准备全部申请文件",in2:"代为递交延期申请",in3:"全程有工作人员在场协助",br_h:"您需要带什么",b1:"护照原件",b2:"本人必须到场（官员要当面确认身份）",b3:"其他要求请在预约时向工作人员确认",res_eb:"真实案例",res_h:"我们客户护照上的 30 天延期章",res_p:"客户当天拿回的延期章示例。为保护隐私，申请编号和签名已遮盖。",gal_eb:"现场照片",gal_h:"每个工作日，我们都在这里",gal_p:"集合点的客户与现场办理照片。为保护隐私，面部和证件信息已做模糊处理。",fin_h:"预约续签，把这段信息发给我们",fin_p:"请把下面的信息发给把这个链接发给您的联系人，我们为您安排日期。",msg:"预约泰国签证延期 30 天\n办理地点：曼谷 IT Square\n日期：\n人数：\n（附护照首页和最近的入境章）",copy:"复制这段信息",copied:"已复制，可直接粘贴到聊天中。",copyfail:"请长按上方文字手动复制。",fb:"泰国签证延期 30 天 · 曼谷 IT Square Laksi",who_fine:"是否准予延期，由移民局官员决定。",foot:"图片仅供宣传。服务详情及费用，请仅向客服人员确认。",alt_hero:"IT Square 三楼移民局 K Counter",alt_tm7:"准备好的 TM.7 延期申请表",alt_pass:"工作人员手中的客户护照",alt_stamp:"护照上的延期章",st_b:"我们的工作人员",st_s:"在粉色集合点找他",alt_staff:"我们在集合点的工作人员",alt_poster:"泰国签证延期 30 天服务地区海报：曼谷、暖武里府、罗勇府、芭提雅",alt_g:"客户在三楼粉色集合点，面部已模糊",title:"泰国签证延期 30 天",cta2:"预约续签"},en:{hero_eb:"THAI VISA EXTENSION · IT SQUARE, BANGKOK",hero_h1:"30-day extension.<br><em>Done the same day, passport back in hand.</em>",tag:"Hand us your passport. We do the rest.",hero_p:"Come to the meeting point on the 3rd floor of IT Square Laksi and give your passport to our staff. We prepare and submit the paperwork. You only see the officer to confirm your identity, then wait for your passport.",c1:"Monday to Friday",c2:"From 08:30",c3:"All paperwork prepared",c4:"Staff on site",c5:"VIP fast lane available",cta:"See the meeting point and steps",cta_note:"Booking in advance required",f1:"Service starts, every working day Monday to Friday",f2:"Best time to arrive: shorter queue",f3b:"30 days",f3:"Added to your current permitted stay",loc_eb:"Where we work",loc_h:"Several immigration offices, Bangkok first",l1_h:"Bangkok · IT Square Laksi, 3rd floor",l1_p:"Immigration Division 1, K Counter. Our main location, staffed every working day.",l2_h:"Nonthaburi",l3_h:"Rayong",l4_h:"Pattaya",l_p:"By advance booking. Ask our staff first.",day_eb:"How it works",day_h:"Four steps once you arrive",day_p:"No forms to fill in and no queue to join by yourself.",s1_t:"From 08:30",s1_h:"Come to the pink meeting point, 3rd floor",s1_p:"It is in front of the pink Employment Office on the 3rd floor. Look for our staff member in the photo and tell them your name.",s2_h:"Hand your passport to our staff",s2_p:"They prepare every document (the TM.7 form and the rest) and submit the extension request for you.",s3_h:"Wait for your turn, then see the officer",s3_p:"When you are called, staff take you to K Counter, where the immigration officer confirms your identity in person.",s4_h:"Collect your passport and go home",s4_p:"Once the extension is stamped, we hand your passport back.",rt_h:"Getting to the 3rd floor in the morning",rt_p:"The mall's main entrance is still closed early in the morning, so use this route:",r1:"Go to Bangkok Bank Express and walk straight on, following the arrow",r2:"Take the escalator down",r3:"Turn right at the bottom, into the car park",r4:"Walk straight to the T2 lift entrance",r5:"Take the lift to the 3rd floor",r6:"Leave the lift, turn right and walk straight to the pink meeting point",rt_btn:"Open the route guide with photos",rt_note:"Once the main entrance is open, go up to the 3rd floor that way.",tm_eb:"Timing",tm_h:"The earlier you come, the sooner you finish",t1_h:"Recommended",t1_p:"Fewer people and a short wait.",t2b:"After 10:00",t2_h:"Expect a long wait",t2_p:"The queue is much longer later in the day.",t3_h:"Need it faster?",t3_p:"A VIP fast lane is available. Ask our staff.",in_h:"What we do for you",in1:"Prepare all the application documents",in2:"Submit the extension request on your behalf",in3:"Staff on site to help throughout",br_h:"What you bring",b1:"Your original passport",b2:"Yourself: the officer must confirm your identity in person",b3:"Check any other requirements with our staff when you book",res_eb:"Real results",res_h:"30-day extension stamps in our customers' passports",res_p:"Examples of the extension stamps customers took home the same day. Request numbers and signatures are covered for privacy.",gal_eb:"On site",gal_h:"We are here every working day",gal_p:"Customers at the meeting point and the process on site. Faces and document details are blurred for privacy.",fin_h:"Book your extension: send us this message",fin_p:"Send the details below to the person who shared this link and we will arrange your date.",msg:"Booking: 30-day Thai visa extension\nLocation: IT Square, Bangkok\nDate:\nNumber of people:\n(Passport page and latest entry stamp attached)",copy:"Copy this message",copied:"Copied. Paste it into your chat.",copyfail:"Press and hold the text above to copy it.",fb:"30-day Thai visa extension · IT Square Laksi, Bangkok",who_fine:"Extensions are always decided by the immigration officer.",foot:"Images are for promotional use. Please confirm service details and fees with our customer service staff only.",alt_hero:"Immigration K Counter on the 3rd floor of IT Square",alt_tm7:"Prepared TM.7 extension form",alt_pass:"Customer passports held by our staff",alt_stamp:"Extension stamp in a passport",st_b:"Our staff",st_s:"Look for him at the pink meeting point",alt_staff:"Our staff member at the meeting point",alt_poster:"Service area poster for the 30-day extension: Bangkok, Nonthaburi, Rayong, Pattaya",alt_g:"Customers at the pink meeting point, faces blurred",title:"30-Day Thai Visa Extension",cta2:"Book your extension"},th:{copied:"คัดลอกแล้ว วางในแชตได้เลย",copyfail:"กดค้างที่ข้อความด้านบนเพื่อคัดลอก",alt_hero:"ตม. K Counter ชั้น 3 IT Square",alt_tm7:"แบบฟอร์ม ตม.7 ที่เตรียมไว้ให้",alt_pass:"พาสปอร์ตลูกค้าในมือพนักงาน",alt_stamp:"ตราต่ออายุในพาสปอร์ต",alt_staff:"พนักงานของเราที่จุดนัดพบ",alt_poster:"โปสเตอร์พื้นที่ให้บริการต่ออายุ 30 วัน กรุงเทพฯ นนทบุรี ระยอง พัทยา",alt_g:"ลูกค้าที่จุดนัดพบสีชมพู เบลอใบหน้าแล้ว",title:"ต่ออายุวีซ่า 30 วัน"}};
+var nodes=document.querySelectorAll("[data-i]");
+nodes.forEach(function(n){var k=n.getAttribute("data-i");if(!(k in T.th))T.th[k]=n.innerHTML;});
+var cur="th";
+function apply(l){
+  if(!T[l])l="th";cur=l;
+  document.documentElement.lang=l;
+  nodes.forEach(function(n){var k=n.getAttribute("data-i");var v=T[l][k];if(v==null)v=T.th[k];
+    if(k==="msg")n.textContent=v.replace(/\\n/g,"\n");else n.innerHTML=v;});
+  document.querySelectorAll("[data-alt]").forEach(function(n){n.alt=T[l][n.getAttribute("data-alt")]||"";});
+  document.querySelectorAll("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false");});
+  document.title=T[l].title;
+  document.getElementById("copied").textContent="";
+}
+function pick(){
+  var h=(location.hash||"").replace("#","");
+  if(T[h])return h;
+  try{var s=localStorage.getItem("ext_lang");if(T[s])return s;}catch(e){}
+  var n=(navigator.language||"th").toLowerCase();
+  return n.indexOf("zh")===0?"zh":n.indexOf("th")===0?"th":"en";
+}
+document.querySelectorAll("[data-lang]").forEach(function(b){b.addEventListener("click",function(){
+  var l=b.getAttribute("data-lang");apply(l);
+  try{localStorage.setItem("ext_lang",l);}catch(e){}
+  try{history.replaceState(null,"","#"+l);}catch(e){location.hash=l;}
+});});
+window.addEventListener("hashchange",function(){var h=location.hash.replace("#","");if(T[h])apply(h);});
+document.querySelectorAll("[data-go]").forEach(function(b){b.addEventListener("click",function(){
+  document.getElementById(b.getAttribute("data-go")==="steps"?"steps":"book-now").scrollIntoView({behavior:"smooth",block:"start"});});});
+document.getElementById("copy").addEventListener("click",function(){
+  var out=document.getElementById("copied"),txt=document.getElementById("msg").textContent;
+  function ok(){out.textContent=T[cur].copied;}
+  function fail(){out.textContent=T[cur].copyfail;}
+  try{navigator.clipboard.writeText(txt).then(ok,fail);}catch(e){fail();}
+});
+apply(pick());
+})();
+</script>
+</body>
+</html>
